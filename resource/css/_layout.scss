@@ -57,12 +57,15 @@ header{
     z-index: 20; transition: .2s;
     
     @include tablet(){position:absolute; top:51px; left: 0; height: 80px; overflow: hidden;}
-
+    
+    // pc 화면에서 메뉴 열기 적용
     &.active{height:320px;}
 
     .container{
         @include tablet(){position: relative;}
     }
+
+    // 헤더 로고 영역 style
     h1{
         position: absolute;top: 14px;left: 27px;width: 170px;
         img{max-width: 100%;}
@@ -71,6 +74,7 @@ header{
         @include laptop(){top:19px;}
     }
 
+    // 메뉴 영역 정의 
     nav{
         h2{display: none;}
         position: fixed; top:60px; right:-250px;
@@ -80,6 +84,7 @@ header{
 
         @include tablet(){position: absolute; top:0; right:auto; left:0; width:78%; height:auto; margin-left: 22%; overflow-y:inherit;}
 
+        // 모바일화면내에서 메뉴열기 적용 
         &.active{
             right:0;
             @include tablet(){right:auto; }
@@ -87,10 +92,13 @@ header{
 
         & > ul{
             @include tablet(){display: flex; justify-content: space-between; align-items: center; }
-           & > li{
+           
+            // DEPTH1 --------------------------------------------------------------
+            & > li{
                position: relative; display: inline-block;
                width:100%; height: 64px;box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.05);
 
+               // pc - depth1 메뉴 가로 사이즈 지정
                @include tablet(){
                    height: 80px; box-shadow: inherit;
                    &:nth-child(1){width:13%};
@@ -103,6 +111,7 @@ header{
                    &:nth-child(8){width:10%};
                 }
 
+                // 메뉴의 a태그 영역 스타일 (공통)
                 a{
                     display: -webkit-box; display: -ms-flexbox; display: flex; 
                     -webkit-box-align: center; -ms-flex-align: center; align-items: center;
@@ -111,11 +120,13 @@ header{
                     @include tablet(){justify-content: flex-start;}
                 }
 
+                // depth1 메뉴의 a태그 영역 스타일
                 & > a{
                     padding-left: 21px;font-weight: 400;font-size: 20px;line-height: 140%; color: $gray80;
                     @include tablet(){padding-left: 0; font-size: 18px; }
                 }
                 
+                // 모바일 - depth1의 우측 접기펴기 아이콘
                 &::after{
                     position: absolute;top:22px; right:23px;
                     width: 21px;
@@ -129,6 +140,7 @@ header{
                     @include tablet(){display: none;}
                 }
 
+                // depth2 ---------------------------------------------------------
                 & > ul{
                     display: none;
                     @include tablet(){display: block; margin-top: 15px;}
@@ -144,6 +156,8 @@ header{
                         }
 
                         & > a{font-size: 13px;color: $gray80; justify-content: flex-start;}
+                        
+                        // depth3 -------------------------------------------------
                         & > ul{
                             margin-top:7px;
                             @include tablet(){margin-top:0;}
@@ -156,7 +170,7 @@ header{
                                     & > a{font-size: 13px;}
                                 }
 
-
+                                // depth3 좌측 아이콘 적용
                                 &::before{
                                     content: "·";
                                     position: absolute; top:7px; left: 28px; font-size: 20px;
@@ -169,18 +183,21 @@ header{
                 
                 &.active{
                     
+                    // 모바일 - 우측 꺽쇠 모양 상하 반전
                     &::after{transform: rotate(180deg);top:27px;}
                     
                     & > ul{
+                        // pc - 모바일에서 접기되어 있는 depth2영역 펼치기
                         display: block;
                     }
                     
+                    // 모바일 - 펼쳐진메뉴 다음 depth1의 형태 수정(상하여백, 상단 라인 적용)
                     & + li{
                         margin-top:22px; border-top:1px solid rgba(0, 0, 0, 0.05);
                         @include tablet(){margin-top: 0;border-top:0;}
                     }
 
-                    // 활성메뉴 언더바 적용
+                    // PC - depth1 활성메뉴 언더바 적용(공통)
                     @include tablet(){
                         &> a::after{
                             position: absolute;bottom:0; left:0;
@@ -193,7 +210,7 @@ header{
                     }
                 }
 
-                // 활성메뉴 언더바 적용
+                // PC - depth1 활성메뉴(active클리스) 언더바 개별 스타일 적용
                 @include tablet(){
                     &:nth-child(1).active > a::after{width: 46px; left:-13px;}
                     &:nth-child(2).active > a::after{width: 46px; left:-13px;}
