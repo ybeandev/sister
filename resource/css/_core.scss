@@ -1,0 +1,79 @@
+// 웹 폰트 적용 =================================================================
+//  use font-family: 'NanumBarunGothic';  font-weight: 100/300/400/700
+@import url('https://webfontworld.github.io/naver/NanumBarunGothic.css');
+body{font-family: "NanumBarunGothic";}
+
+// color 설정 ==================================================================
+$color-primary      : #50B0AB;
+$color-secondary    : #EE7768;
+$color-gray         : #ddd;
+
+$gray10             : #EBECF2;
+$gray20             : #D8DAE6;
+$gray30             : #BABDCC;
+$gray40             : #9A9EB3;
+$gray50             : #828699;
+$gray60             : #696C80;
+$gray70             : #515466;
+$gray80             : #3A3D4D;
+$gray90             : #252833;
+$gray100            : #12131A;
+
+$purple             : #5F249F;
+$purple2            : #A177D8;
+$purple3            : #D6C3F5;
+$purple5            : #F7F3FD;
+
+// 반응형 적용 코드 ===============================================================
+// Brake point
+
+$mobile: 576px;
+$tablet: 768px;
+$laptop: 992px;
+// $desktop: 1100px;
+
+// Mixins
+//모바일 사이즈 (모바일 최소 사이즈 >=태블릿 세로사이즈)
+@mixin mobile {
+    @media (min-width: #{$mobile}) {
+        @content;
+    }
+}
+
+//태블릿 사이즈 - 노트북(laptop - pc최소사이즈) >= tablet 세로 버전까지
+@mixin tablet {
+    @media (min-width: #{$tablet}) {
+        @content;
+    }
+}
+
+//노트북사이즈 - 노트북(laptop - pc최소사이즈)에서 tablet 세로 버전까지
+@mixin laptop {
+    @media (min-width: #{$laptop}) {
+        @content;
+    }
+}
+
+.pc-only{
+    display: none;
+    @include tablet(){display: block;}
+}
+.mobile-only{
+    display: block;
+    @include tablet(){display: none;}
+}
+
+// >>>End 반응형 적용 코드
+
+// HIDDEN ELEMENT 적용 (접근성) ====================================================
+.a11y-hidden {position: absolute;width: 1px;height: 1px;margin: -1px;overflow: hidden;clip-path: polygon(0 0, 0 0, 0 0);}
+
+.scrollDisable {height:100%; min-height:100%; overflow:hidden !important; touch-action:none;}
+
+// margin ========================================================================
+.mt0{margin-top: 0 !important;}
+
+// padding =======================================================================
+
+
+// text 기본설정 ==================================================================

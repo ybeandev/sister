@@ -1,0 +1,111 @@
+// design 요소 적용
+// ------------------------------------------------------------
+
+// 메뉴아이콘 디자인
+@mixin menu-trigger {
+    display: inline-block;
+    transition: all .4s;
+    box-sizing: border-box;
+}
+
+.menu-trigger{
+    position: relative; width: 32px; height: 32px;
+    @include menu-trigger();
+    span{
+        position: absolute; left:4px; width:24px; height:3px; background-color: $gray50; 
+        @include menu-trigger();
+
+        &:nth-child(1){top:7px;}
+        &:nth-child(2){top:14px;}
+        &:nth-child(3){bottom:8px;}
+    }
+
+    &.active{
+        span{
+            &:nth-child(1){transform: translateY(7px) rotate(-45deg);}
+            &:nth-child(2){opacity : 0;}
+            &:nth-child(3){transform: translateY(-7px) rotate(45deg);}
+        }
+    }
+
+}
+
+// 검색아이콘 디자인
+
+.search-trigger{
+    position: relative; width: 32px; height: 32px;
+    @include menu-trigger();
+    span{
+        position: absolute; left:7px; width:24px; height:3px; background-color: $gray50; 
+        @include tablet(){height:2px; background-color: $purple;}
+        @include menu-trigger();
+
+        &:nth-child(1){
+            top:3px; 
+            left:6px;
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            background-color: #fff;
+            display: inline-block;
+            border: 3px solid $gray50;
+
+            @include tablet(){top:8px; left:8px; width:12px; height: 12px; border:2px solid $purple;}
+        }
+        &:nth-child(2){
+            top:20px;
+            left:20px;
+            width:10px;
+            transform: rotate(45deg);
+            @include tablet(){top:19px;left:17px;width:6px;}
+        }
+    }
+
+    &.active{
+        span{
+            &:nth-child(1){
+                width:24px;
+                height: 3px;
+                border-radius: 0; border: none;
+                background-color: $gray50;
+                transform: translateX(-2px) translateY(11px) rotate(-45deg);
+
+                @include tablet(){width:18px; height:2px; transform: translateX(-1px) translateY(7px) rotate(-45deg);}
+            }
+            &:nth-child(2){
+                width:24px;height: 3px;
+                transform: translateX(-16px) translateY(-6px) rotate(45deg);
+
+                @include tablet(){width:18px; height: 2px;transform: translateX(-10px) translateY(-4px) rotate(45deg);}
+            }
+        }
+    }
+
+}
+
+.btn-search2{
+    position: relative; width: 32px; height: 32px;
+    @include menu-trigger();
+    span{
+        position: absolute; left:7px; width:24px; height:3px; background-color: $gray50; 
+        @include menu-trigger();
+
+        &:nth-child(1){
+            top:3px; 
+            left:6px;
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            background-color: #fff;
+            display: inline-block;
+            border: 3px solid $gray50;
+        }
+        &:nth-child(2){
+            top:20px;
+            left:20px;
+            width:10px;
+            transform: rotate(45deg);
+        }
+    }
+
+}
