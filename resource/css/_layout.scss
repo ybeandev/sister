@@ -3,6 +3,7 @@ header{
     @include tablet(){position: inherit; height: 50px;box-shadow:0px 1px 1px rgba(0, 0, 0, 0.05);}
 }
 
+// 최상단서브네비게이션바(SubNavigationBar)
 .snb{
     position: absolute; top:14px; right:0;
     @include tablet(){top:7px;}
@@ -13,7 +14,7 @@ header{
         }
     }
 
-
+    // 열림터|울림|관련사이트 영역
     .bookmark{
         
         ul{
@@ -29,6 +30,7 @@ header{
         }
     }
 
+    // ENGLISH / 검색버튼 / 모바일메뉴버튼
     .sub-link{
         
         display: -webkit-box; display: -ms-flexbox; display: flex; 
@@ -46,7 +48,7 @@ header{
 }
 
 .gnb{
-    width: 100vw; height: 60px; background-color: #fff; 
+    width: 100%; height: 60px; background-color: #fff; 
     box-shadow:0px 1px 1px rgba(0, 0, 0, 0.05);
     z-index: 20; transition: .2s;
     
@@ -95,14 +97,14 @@ header{
                // pc - depth1 메뉴 가로 사이즈 지정
                @include tablet(){
                    height: 80px; box-shadow: inherit;
-                   &:nth-child(1){width:13%};
-                   &:nth-child(2){width:10%};
+                   &:nth-child(1){width:12%};
+                   &:nth-child(2){width:12%};
                    &:nth-child(3){width:13%};
                    &:nth-child(4){width:14%};
-                   &:nth-child(5){width:10%};
-                   &:nth-child(6){width:10%};
-                   &:nth-child(7){width:10%};
-                   &:nth-child(8){width:10%};
+                   &:nth-child(5){width:13%};
+                   &:nth-child(6){width:12%};
+                   &:nth-child(7){width:12%};
+                   &:nth-child(8){width:12%};
                 }
 
                 // 메뉴의 a태그 영역 스타일 (공통)
@@ -137,7 +139,7 @@ header{
                 // depth2 ---------------------------------------------------------
                 & > ul{
                     display: none;
-                    @include tablet(){display: block; margin-top: 15px;}
+                    @include tablet(){display: block; padding-top: 15px;}
 
                     & > li{
                         display: inline-block;
@@ -218,8 +220,24 @@ header{
             } 
         }
     }
+
 }
 
+// 로케이션바
+.lnb{
+    position: absolute; top:60px; left: 0; height:40px; 
+    display: flex; align-items: center;
+    background: #FBFAFF; box-shadow: 0px -1px 1px rgba(0, 0, 0, 0.1);
+    font-size: 12px; color:$gray50; 
+
+    @include tablet(){top:130px; }
+    a{
+        margin:0 8px;
+        &.current{color:$purple; }
+    }
+}
+
+// 검색폼
 .div-search{
     position: fixed; top:0; right:0; z-index: -1;
     width:100%; height: 60px; 
@@ -250,28 +268,125 @@ header{
 
 }
 
-.mobile-footer{
-    position: fixed; bottom:0; left:0; z-index: 110;
+// 본문영역
+main{
+    margin-top:40px;
 
-     
+    & .container{
+
+        @include tablet(){
+            display: flex; flex-direction: row;
+            margin-top:120px; 
+        }
+    
+        .mnb{
+            display: none;
+
+            @include tablet(){
+                display: block; width:190px;
+        
+                h2{
+                    padding: 43px 0 20px; margin-bottom: 9px;
+                    font-size: 20px; font-weight: 600; color: $gray80;
+                    border-bottom: 1px solid $gray20;}
+                
+                ul{
+                    display: none;
+                    @include tablet(){display: block; padding-top: 15px;}
+        
+                    & > li{
+                        display: inline-block;
+                        width:100%; height: 33px;margin-top:15px;
+                        @include tablet(){margin-top:0; height: 24px;}
+        
+                        a{
+                            padding-left: 21px;font-weight: 400;font-size: 15px;color: #3A3D4D;
+                            @include tablet(){padding-left: 0;}
+                        }
+        
+                        & > a{font-size: 13px;color: $gray80; justify-content: flex-start;}
+                        
+                        // depth2 -------------------------------------------------
+                        & > ul{
+                            margin-top:7px;
+                            @include tablet(){margin-top:0;}
+        
+                            & > li{
+                                height: 33px; padding-left: 24px; position: relative;
+        
+                                @include tablet(){
+                                    height:24px; padding-left:18px;
+                                    & > a{font-size: 13px;}
+                                }
+        
+                                // depth3 좌측 아이콘 적용
+                                &::before{
+                                    content: "·";
+                                    position: absolute; top:7px; left: 28px; font-size: 20px;
+                                    @include tablet(){top:3px; left: 5px; font-size: 15px;}
+                                }
+                            }
+                            & + li{margin-top: 10px;}
+
+                        }
+                    }
+                }
+            }
+        }
+    
+        .cont_body{
+            padding: 30px 0px;
+
+            @include tablet(){
+                border-left: 1px solid $gray20; padding: 30px 45px;
+            }
+        }
+    
+    }
+}
+
+.side-menu{
+    position: fixed; bottom:0; left:0; z-index: 110;
+    @include tablet(){display: none;}
+    @include laptop(){display: block; top:197px; left:50%; bottom:inherit; margin-left: 585px;}
+
     ul{
         display: -webkit-box; display: -ms-flexbox; display: flex; 
         -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; 
         -webkit-box-align: center; -ms-flex-align: center; align-items: center;
+        @include tablet(){flex-direction: column;}
         
         li{
             width:calc(100vw / 4); height:54px; border: 1px solid #FFFFFF; border-right: none;
+            @include tablet(){
+                width: 72px; height: 60px; margin: 7px 0; 
+                border-radius: 6px 16px; box-shadow: 0 4px 4px rgba(0,0,0,.25); border:0;
+            }
+        
             a{
                 display: -webkit-box; display: -ms-flexbox; display: flex; 
                 -webkit-box-pack: center; -ms-flex-pack: center; justify-content: center; 
                 -webkit-box-align: center; -ms-flex-align: center; align-items: center;
                 width:100%; height: 100%; color: $purple; font-size: 14px; padding-top: 27px;
+                @include tablet(){font-size: 12px;}
             }
 
-            &:nth-child(1){background:$purple3 url(../images/handsheart.png) no-repeat center 6px;}
-            &:nth-child(2){background:$purple3 url(../images/Home_duotone_line.png) no-repeat center 6px;}
-            &:nth-child(3){background:$purple3 url(../images/notebook_light.png) no-repeat center 6px;}
-            &:nth-child(4){background:$purple3 url(../images/Book_open_light.png) no-repeat center 6px;border-right: 1px solid #FFFFFF; }
+            &:nth-child(1){
+                background:$purple3 url(../images/handsheart.png) no-repeat center 6px;
+                @include tablet(){background:$purple3 url(../images/handsheart.png) no-repeat center 10px;}
+            }
+            &:nth-child(2){
+                background:$purple3 url(../images/Home_duotone_line.png) no-repeat center 6px;
+                @include tablet(){background:$purple3 url(../images/handsheart.png) no-repeat center 10px;}
+            }
+            &:nth-child(3){
+                background:$purple3 url(../images/notebook_light.png) no-repeat center 6px;
+                @include tablet(){background:$purple3 url(../images/handsheart.png) no-repeat center 10px;}
+            }
+            &:nth-child(4){
+                background:$purple3 url(../images/Book_open_light.png) no-repeat center 6px;border-right: 1px solid #FFFFFF; 
+                @include tablet(){background:$purple3 url(../images/handsheart.png) no-repeat center 10px;border-right:0}
+            }
         }
     }
 }
@@ -287,4 +402,9 @@ header{
     }
 
 
+}
+
+footer{
+    height:342px; padding-bottom: 53px; background: #FAFAFC;
+    @include tablet(){height:144px;padding-bottom:0; }
 }
