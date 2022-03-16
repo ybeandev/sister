@@ -2,12 +2,6 @@ header{
     position: relative; z-index: 120;
     @include tablet(){position: inherit; height: 50px;box-shadow:0px 1px 1px rgba(0, 0, 0, 0.05);}
 }
-// header > div{
-//     position: fixed; top:0; left:0;
-//     height:60px; overflow: hidden; z-index: 120;
-//     background-color: #fff;
-//     @include tablet(){position: relative; height: 130px; background-color:transparent;}
-// }
 
 .snb{
     position: absolute; top:14px; right:0;
