@@ -263,9 +263,6 @@ header{
         @include laptop(){left:50%; margin-left: 190px;}
         
     }
-
-
-
 }
 
 // 본문영역
@@ -334,11 +331,12 @@ main{
         }
     
         .cont_body{
+            position: relative;
             width:100%; padding: 30px 0px;
 
             @include tablet(){
                 width:calc(100% - 190px);
-                border-left: 1px solid $gray20; padding: 30px 45px;
+                border-left: 1px solid $gray20; padding: 45px 65px;
             }
 
             article{
