@@ -176,7 +176,71 @@
 // END 목록형 
 
 // 갤러리형 ------------------------------------------------------
+.cont_gallery{
+    border-top:1px solid $gray20;
+    @include tablet(){border-top: none;}
+    .list > li{
+        display: flex; gap: 10px;
+        padding:30px 0;
+        border-bottom:1px solid $gray20;
+        @include tablet(){gap: 20px;}
+        .wrap_img{
+            @include tablet(){margin-left: 25px;}
+            img{
+                width:131px; height: 82px; object-fit: cover;
+                @include tablet(){
+                    width:264px; height: 165px;
+                }
+            }
+        }
 
+        .content{
+            @include tablet(){margin-right: 25px;}
+            h2{
+                font-size: 13px; line-height: 20px; color: $gray80; 
+                @include tablet(){font-size: 18px;line-height: 28px;}
+            }
+            .summary{
+                display: none;
+                @include tablet(){display: block; font-size: 14px; line-height: 25px; color: $gray80; margin-top: 13px;}
+            }
+            .subcont{
+                margin-top: 2px;
+                @include tablet(){margin-top: 6px;}
+                ul{
+                    display: flex; align-items: center;
+                    li{
+                        display: flex; align-items: center; height:20px;
+                        margin-right: 17px;
+                        font-size: 11px; color: $gray50;
+
+                        @include tablet(){height:22px;font-size: 12px;}
+
+                        &.date{
+                            background: url(../images/Date_range_light.svg) no-repeat 0 0; background-size: 18px; padding-left: 20px;
+                            @include tablet(){background-size: 23px;padding-left: 29px;}
+                        }
+                        &.reply{
+                            background: url(../images/chat.svg) no-repeat 0 0;  background-size: 18px; padding-left: 20px;
+                            @include tablet(){background-size: 23px;padding-left: 27px;}
+                        }
+                        &.viewNum{
+                            background: url(../images/View_light.svg) no-repeat 0 0;  background-size: 18px; padding-left: 20px;
+                            @include tablet(){background-size: 23px;padding-left: 27px;}
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .notice > li{
+        background-color: $purple5; border-bottom: none;
+        .content{
+            h2{color:$purple;}
+        }
+    }
+}
 // END 갤러리형
 
 
