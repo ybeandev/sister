@@ -109,3 +109,75 @@
     }
 
 }
+
+// 게시판 
+// ==========================================================================
+
+// 목록형 -------------------------------------------------------
+.cont_board{
+    border-top:1px solid $gray20;
+    .list{
+
+        li{
+            position: relative; height: 74px;
+            border-bottom:1px solid $gray20;
+            font-size: 11px; line-height: 18px;
+
+            @include tablet(){
+                display: flex; align-items: center; justify-content: space-between; height: 69px;
+                font-size: 16px;
+            }
+        }
+        .number{
+            position: absolute; top:15px; left:0;
+            color:$purple3; font-weight: 600;
+
+            @include tablet(){position: relative; top:0;}
+        }
+        .title{
+            display: flex; align-items: center; flex-wrap: wrap;
+            padding-top: 36px; padding-bottom: 10px;
+            color:$gray80; font-size: 13px; 
+            @include tablet(){width: 76%; padding-top: 0; padding-bottom: 0;}
+
+            .memo{
+                padding-top: 3px;
+                max-width: 100%;
+                &.newmemo{max-width:91%;}
+                @include tablet(){padding-top: 2px;}
+            }
+            .new{
+                display: flex; align-items: center; justify-content: center;
+                width:18px; height:18px; margin-left: 7px;
+                border-radius: 50%; background-color: #FD5B5B;
+                font-size: 10px; color:#fff;
+            }
+        }
+        .date{
+            position: absolute; top:15px; right:5px;
+            color: $gray50;
+            @include tablet(){position: relative; top:0;}
+        }
+
+    }
+    
+    .notice{
+        margin-top: -1px;
+        border:1px solid $gray50; border-left: none; border-right: none;
+        li:last-child{border-bottom:none;}
+
+        @include tablet(){
+            border:none;
+            li:last-child{border-bottom: 1px solid $gray20;}
+        }
+        .number{color:$purple;}
+        .title .memo{color:$purple;}
+    }
+}
+// END 목록형 
+
+// 갤러리형 ------------------------------------------------------
+
+// END 갤러리형
+
+// END 게시판

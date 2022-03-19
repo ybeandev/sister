@@ -334,10 +334,17 @@ main{
         }
     
         .cont_body{
-            padding: 30px 0px;
+            width:100%; padding: 30px 0px;
 
             @include tablet(){
+                width:calc(100% - 190px);
                 border-left: 1px solid $gray20; padding: 30px 45px;
+            }
+
+            article{
+                h1{
+                    color: $gray80; font-size: 20px; margin-bottom: 15px;
+                }
             }
         }
     
@@ -467,6 +474,7 @@ footer{
         background-color: rgba($color: #000, $alpha: .3);
         transition: .3s ease-in-out;
     }
-
-
 }
+
+// 개별 페이지 디자인 적용
+// =============================================================================================
