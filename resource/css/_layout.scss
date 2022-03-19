@@ -258,7 +258,7 @@ header{
     }
 
     &.active{
-        top:60px;
+        top:60px; z-index: 50;
         @include tablet(){top:48px; display: block; right:10px;}
         @include laptop(){left:50%; margin-left: 190px;}
         
@@ -270,10 +270,9 @@ header{
 
 // 본문영역
 main{
-    margin-top:40px;
+    margin-top:40px; min-height:calc(100% - 314px);
 
     & .container{
-
         @include tablet(){
             display: flex; flex-direction: row;
             margin-top:120px; 
@@ -391,6 +390,74 @@ main{
     }
 }
 
+footer{
+    height:342px; padding-bottom: 53px; background: #FAFAFC;
+    font-size: 10px; color: $gray50; line-height: 17px;
+
+    @include mobile(){height:270px;}
+    @include tablet(){height:144px;padding-bottom:0; }
+
+    .container{
+        position: relative; padding-top: 22px;
+        @include tablet(){padding-top: 0;}
+    }
+
+    .companyinfo{
+        position: static;
+        @include tablet(){position: absolute; top:45px; left:10px; margin-top: 0;}
+        li{
+            margin-bottom: 0;
+            @include tablet(){margin-bottom: 5px;}
+        }
+    }
+
+    .social-copy{
+        position: static; margin-top: 18px; 
+        // text-align: left;
+        // @include mobile(){text-align: left;}
+        @include tablet(){position: absolute; top:37px; right:10px; margin-top: 0; width:auto;}
+        & > ul{
+            display: flex; align-items: flex-end; flex-direction: column;
+            @include mobile(){align-items: flex-start;}
+            & > li{
+                display: flex; justify-content: flex-start; align-items: center; margin-bottom: 5px;
+                // @include tablet(){justify-content: flex-end;}
+    
+                &:first-child{
+                    justify-content: center; 
+                    @include tablet(){justify-content: flex-end;}
+                }
+    
+                &:nth-child(2){
+                    width:auto;
+                    @include tablet(){width:340px;}
+                    @include laptop(){width:auto;}
+                }
+            } 
+        }
+        .sns{
+            margin-bottom: 13px;
+            @include tablet(){margin-bottom:12px;}
+
+            ul{
+                display: flex; justify-content: center; align-items: center; flex-wrap: wrap; width: 300px;
+                @include mobile(){width: auto;}
+                li{
+                    width: 86px; margin-bottom: 6px;
+                    @include tablet(){margin-bottom: 0;}
+                    a{
+                        display: flex; align-items: center; font-size: 12px; margin-right: 11px; letter-spacing: 1px;
+                        img{margin-right: 9px;}
+                    }
+                    &:nth-child(2){width:97px;}
+                    &:last-child > a{margin-right: 0;}
+                }
+            }
+        }
+
+    }
+}
+
 .dimmed{
     display: none;background-color: rgba($color: #000, $alpha: 0);
     
@@ -402,9 +469,4 @@ main{
     }
 
 
-}
-
-footer{
-    height:342px; padding-bottom: 53px; background: #FAFAFC;
-    @include tablet(){height:144px;padding-bottom:0; }
 }

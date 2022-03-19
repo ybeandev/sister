@@ -77,3 +77,11 @@ $laptop: 992px;
 
 
 // text 기본설정 ==================================================================
+
+// mobile BR 적용
+br.mobile-only{
+    display: block;
+    @include mobile{
+          display: none;
+    }
+}
