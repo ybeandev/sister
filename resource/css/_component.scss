@@ -109,6 +109,50 @@
     }
 }
 
+// 분류캡슐 스타일 
+// =========================================================================
+.sorting{
+    margin-bottom: 8px;
+    @include tablet(){margin-bottom: 40px;}
+    ul{
+        display: flex; align-items: center; gap:8px; flex-wrap: wrap;
+        li{
+            margin-bottom: 8px;
+            button{
+                display: flex; justify-content: center; align-items: center;
+                padding:8px 15px 6px;height: 40px;
+                border: 1px solid $gray20; border-radius: 20px; background-color: #fff; 
+                font-size: 15px; color: $gray50;
+            }
+            
+            &.active button{background-color: $purple; color:#fff;}
+        }
+    
+    }
+}
+
+.area-sorting{
+    display: flex; justify-content: space-between; align-items: flex-end;
+    .sorting{
+        margin-bottom: 0;
+        ul li{margin-bottom: 0;}
+    } 
+    .dash{
+        display: none; background-color: $gray20; height: 1px; flex-grow: 1; margin: 15px;
+        @media (min-width:1030px) {display: block;}
+    }
+    .more{
+        button{
+            border:1px solid $gray20; border-radius: 50%;
+            @media (min-width:1030px) {
+                border:none;
+            }
+        }
+    }
+    
+
+}
+
 // 게시판 
 // ==========================================================================
 
@@ -243,6 +287,53 @@
 }
 // END 갤러리형
 
+// 갤러리형2 (간행물/후원등) ------------------------------------------------------
+.cont_gallery2{
+    margin-top: 40px;
+    @include tablet(){margin-top: 0;}
+    .list{
+        display: flex; flex-wrap: wrap; width:100%;
+        &> li{
+            display: flex; flex-direction: column; align-items: center;
+            width:calc(100% / 2); min-height: 310px;
+            @include tablet(){width:calc(100% / 2); min-height:430px;}
+            @media (min-width: 950px) {width:calc(100% / 3);}
+            @media (min-width: 1160px) {width:calc(100% / 4);}
+            .wrap_img{
+                display: flex; justify-content: center;
+                width:100%;
+                border-bottom: 3px solid $gray20;
+                img{
+                    width:120px; height: 160px; object-fit: cover;
+                    @include tablet(){
+                        width:180px; height: 240px;
+                    }
+                }
+            }
+    
+            .content{
+                width:150px; margin-top: 17px;
+                @include tablet(){width:180px; margin-top: 14px;}
+                .header-list{
+                    display: flex; justify-content: space-between; min-height:25px;
+                    @include tablet(){min-height:27px;}
+                    h2{
+                        font-size: 13px; line-height: 20px; color: $purple; 
+                        @include tablet(){font-size: 14px;line-height: 30px;}
+                    }
+                }
+                .summary{
+                    color: $gray80; font-size: 13px; line-height: 22px;
+                    @include tablet(){font-size: 16px; line-height: 30px;}
+                }
+            }
+        }
+
+        &.noline > li .wrap_img{border-bottom: none;}
+    } 
+}
+
+// END 갤러리형2 (간행물/후원등)
 
 // 게시판 view ------------------------------------------------------
 .cont_view{

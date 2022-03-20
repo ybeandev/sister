@@ -264,11 +264,37 @@ header{
         
     }
 }
+// 메인 index 페이지 디자인
+main.main{
+    margin-top: 80px; min-height:calc(100% - 274px);
+
+    .list-action{
+        display: flex; gap: 24px;
+        & > li{
+            display: flex; flex-direction: column; 
+            padding:30px 0;
+            @include tablet(){gap: 20px;}
+            .wrap_img{
+                img{
+                    width:131px; height: 82px; object-fit: cover;
+                    @include tablet(){
+                        width:264px; height: 165px;
+                    }
+                }
+            }
+    
+            .content{
+                width:264px; font-size: 14px; line-height: 25px; color: $gray80; margin-top: 13px;
+                @include tablet(){width:264px; font-size: 14px; line-height: 25px; color: $gray80; margin-top: 13px;}
+
+            }
+        }
+    }
+}
 
 // 본문영역
-main{
+main.sub{
     margin-top:40px; min-height:calc(100% - 314px);
-
     & .container{
         @include tablet(){
             display: flex; flex-direction: row;
@@ -336,7 +362,7 @@ main{
 
             @include tablet(){
                 width:calc(100% - 190px);
-                border-left: 1px solid $gray20; padding: 45px 65px;
+                border-left: 1px solid $gray20; padding: 45px 0 45px 65px;
             }
 
             article{
