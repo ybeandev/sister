@@ -85,3 +85,14 @@ br.mobile-only{
           display: none;
     }
 }
+
+// 컬럼 분할 =======================================================================
+.column{
+    display: flex; gap:24px; flex-direction: column;
+
+    // .column-item{width:100%;}
+    @include tablet(){
+        .column-item{width:calc(100% / 2 - 12px);}
+        flex-direction: row;
+    }
+}

@@ -266,28 +266,267 @@ header{
 }
 // 메인 index 페이지 디자인
 main.main{
-    margin-top: 80px; min-height:calc(100% - 274px);
+    margin-top: 0; min-height:calc(100% - 274px);
+    @include tablet(){margin-top: 80px; }
+    // 활동 
+    .action{
+        h2{
+            font-size: 20px; color:$gray80; margin-bottom: 20px;
+            @include laptop(){font-size: 24px;}
+        }  
 
-    .list-action{
-        display: flex; gap: 24px; 
-        & > li{
-            display: flex; flex-direction: column;  
-            width:50%; padding:30px 0;
-            @include tablet(){gap: 24px;width:25%;}
-            .wrap_img{
-                img{
-                    width:131px; height: 82px; object-fit: cover;
-                    @include tablet(){
-                        width:100%; height: 100%;
+        .list{
+
+            display: flex; gap: 24px; flex-wrap: wrap; padding:20px 0 48px;
+            @include laptop(){padding:20px 0 88px;}
+            & > li{
+                display: flex; flex-direction: column;
+                width:calc(100% / 2 - 12px);
+                @include laptop(){width:calc(100% / 4 - 18px);}
+                .wrap_img{
+                    img{
+                        width:100%; height: 100%; object-fit: cover;
+                        @include tablet(){
+                            width:100%; height: 100%;
+                        }
+                    }
+                }
+        
+                .content{
+                    width:100%; font-size: 14px; line-height: 25px; color: $gray80; margin-top: 13px;
+                    @include tablet(){width:100%; font-size: 14px; line-height: 25px; color: $gray80; margin-top: 13px;}
+
+                }
+            }
+        }
+    }
+
+    // 최신글 스타일
+    .latest{
+        margin-top: 20px;
+        li{
+            margin: 22px 0;
+            @include tablet(){margin: 17px 0;}
+        }
+        a{
+            display: flex; justify-content: space-between; gap:5px; font-size: 13px;
+            @include tablet(){font-size: 16px;}
+            .memo{
+                width: calc(100% - 72px); color:$gray80;
+                @include tablet(){width: calc(100% - 100px);}
+            }
+            .date{
+                width: 72px; color: $gray50;
+                @include tablet(){width: 100px;}
+            }
+        }
+    }
+
+    // 공지사항
+    .notice{
+        .latest{margin-top: 0;}
+        h2{
+            font-size: 20px; color:$gray80;
+            @include laptop(){font-size: 24px;}
+        }  
+    }
+
+    // 부설기관
+    .attached-organization{
+        margin-top: 30px;
+        @include tablet(){margin-top: 90px;}
+        header{
+            display: flex; justify-content: flex-start; align-items: center;
+            height:auto; box-shadow: none;
+
+            h2{
+                font-size: 20px; color:$gray80; width:95px;
+                @include laptop(){font-size: 24px;}
+            } 
+
+            .area-sorting{
+                width: calc(100% - 95px); margin-top: 0;
+                &.latest li{margin: 0;}
+            }
+        }
+
+        .tabcont2{display: none;}
+    }
+
+    // 상담안내
+    .info{
+
+        // 상담 링크
+        .link{
+            display: flex; justify-content: space-between; gap:10px;
+
+            a{
+                display: inline-block; width:calc(100%/2 - 5px); height:140px;
+                font-size: 20px; color: $gray80; padding:18px;
+                @include tablet(){height:230px; padding:30px;}
+
+                &:first-child{
+                    background:$purple5 url(/resource/images/main1.svg) no-repeat 80% 80%;
+                    background-size: 50px;
+                    @include tablet(){background-size: 100px;}
+                }
+                &:last-child{
+                    background:$purple3 url(/resource/images/main2.svg) no-repeat 80% 80%;
+                    background-size: 50px;
+                    @include tablet(){background-size: 100px;}
+                }
+            }
+
+        }
+
+        // 상담안내
+        .consul-info{
+            margin-top: 9px; height:140px;  padding:20px;
+            color: #fff; 
+            background:$purple2 url(/resource/images/main3.svg) no-repeat 92% 12%;
+            background-size: 50px;
+
+            @include tablet(){ 
+                height:290px; padding:30px;
+                margin-top: 25px; background-size: 100px; background-position: 93% 85%;
+            }
+
+            h2{ 
+                font-size: 20px;margin-bottom: 16px;
+                @include tablet(){margin-bottom: 68px;}
+            }
+
+            .txt, dt, dd{
+                font-size: 13px;
+                @include tablet(){font-size: 16px;}
+            }
+
+            dl{
+                display: flex; flex-wrap: wrap;
+                margin-top: 3px;
+                @include tablet(){flex-direction: column; margin-top: 9px;}
+
+                dt{width:53px;}
+                dd{width:calc(100% - 53px);}
+                
+                dt, dd{
+                    padding:2px 0;
+                    @include tablet(){padding:5px 0; width:auto;}
+                }
+            }
+        }
+    }
+
+    .bg-purple{
+        background-color: $purple5; margin-top: 40px; padding: 40px 0 60px;
+        @include tablet(){margin-top: 60px; padding: 60px 0 100px;}
+    }
+
+    // 최근이슈
+    .issue{
+        h2{
+            font-size: 20px; color:$gray80; width:95px; margin-bottom: 15px;
+            @include laptop(){font-size: 24px; margin-bottom: 20px;}
+        } 
+
+        .list{
+            position: relative; width: 100vw; height:calc(55vw + 25px); margin-left: -27px; padding-left: 24px;
+            overflow: hidden; transition: .6s;
+            @include tablet(){width:100%; height:auto; overflow:inherit;}
+
+            ul{
+                display: flex; padding:0 8px; gap: 8px;
+                width:calc(55vw * 4 + 24px); 
+
+                @include tablet(){padding: 0; width: 100%; gap:20px; flex-wrap: wrap;}
+
+                li{
+                    position: relative;  height:calc(55vw - 40px); padding: 20px; margin-top: 25px;
+                    background-color: #fff;
+
+                    @include tablet(){width:calc(100% / 2 - 12px);height: 188px; }
+                    @include laptop(){width:calc(100% / 4 - 18px);height: 188px; }
+                    h3{
+                        font-size: 13px; color: $purple;
+                        @include mobile(){font-size: 14px;}
+                    }
+
+                    .txt{
+                        margin-top: 9px;
+                        font-size: 13px; line-height: 20px; color: $gray80;
+                        @include mobile(){font-size: 16px;line-height: 27px;margin-top: 16px;}
+                    }
+
+                    .date{
+                        position: absolute; left: 20px; bottom: 20px;
+                        font-size: 13px; color: $gray50;
+                        @include mobile(){font-size: 16px;}
                     }
                 }
             }
-    
-            .content{
-                width:100%; font-size: 14px; line-height: 25px; color: $gray80; margin-top: 13px;
-                @include tablet(){width:100%; font-size: 14px; line-height: 25px; color: $gray80; margin-top: 13px;}
+        }
+    }
 
+    .etc{
+        display: flex; flex-wrap: wrap; gap: 20px; margin-top: 0;
+        @include tablet(){margin-top: 60px;}
+        h2{
+            font-size: 20px; color:$gray80; width:95px; margin-bottom: 15px;
+            @include laptop(){font-size: 24px; margin-bottom: 20px;}
+        }
+
+        // 후원안내
+        .sponsorship{
+            width:100%; margin-bottom: 20px;
+            @include tablet(){width:100%; margin-bottom: 0;}
+            @include laptop(){width:calc(100%/3 - 15px);}
+            
+            .cont{
+                height: 86px; padding: 20px;
+                font-size: 20px; color: #fff; line-height: 26px;
+                background:$purple2 url(/resource/images/main4.svg) no-repeat 94% 55%;
+                background-size: 50px;
+                @include tablet(){padding: 20px;background-size: 50px;}
+                @include laptop(){
+                    padding: 30px;height: 200px;background-size: 100px;
+                    background:$purple2 url(/resource/images/main4.svg) no-repeat 87% 69%;
+                }
             }
+        }
+
+        // 발간물/소식지
+        .paper, .letter{
+            width:calc(100%/2 - 15px);
+            @include tablet(){width:calc(100%/2 - 15px)}
+            @include laptop(){width:calc(100%/3 - 15px)}
+
+            .cont{
+                display: flex; flex-direction: column;
+                @include tablet(){flex-direction: row;}
+                // 이미지 설정
+                .wrap_img{
+                    img{
+                        width:100%; height: 218px; object-fit: cover; 
+                        @include tablet(){
+                            width:145px; height: 200px; 
+                        }
+                    }
+                }
+    
+                .summary{
+                    position: relative; background-color: #fff;
+                    .txt{
+                        padding:15px;font-size: 13px; height: 160px;
+                        @include tablet(){padding:30px;font-size: 16px;}
+                    }
+                    .date{
+                        position: absolute; left: 15px; bottom: 20px;
+                        font-size: 16px; color: $gray50;
+                        @include tablet(){font-size: 13px;left: 30px; }
+                    }
+                }
+            }
+
         }
     }
 }
