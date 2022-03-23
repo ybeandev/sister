@@ -607,6 +607,46 @@ main.sub{
             article{
                 h1{
                     color: $gray80; font-size: 20px; margin-bottom: 15px;
+                    @include tablet(){margin-bottom: 20px;}
+                }
+                .summary-title{
+                    font-size: 16px; line-height: 25px; color: $gray80; margin: 16px 0 21px;
+                    @include tablet(){
+                        font-size: 16px;margin: 23px 0 21px;
+                    }
+                }
+
+                // 열림터 소식페이지 링크
+                .link-open{
+                    margin-bottom: 40px;
+                    @include tablet(){position: absolute; top:32px; right: 0; width: 60%;}
+                    ul{
+                        display: flex; justify-content: space-between; gap:10px;
+                        
+                        li{
+                            width: 50%; height: 120px;
+                            border: 1px solid $purple2;
+                            @include tablet(){height:40px; border:none; }
+                            a{
+                                display: flex; justify-content: center; 
+                                width: 100%; height: 100%; padding-top: 85px;
+                                color: $purple; font-size: 16px;
+                                @include tablet(){padding-top: 0; color: #fff; align-items: center;}
+                                img{
+                                    display: none;
+                                    @include tablet(){display: block;}
+                                }
+                            }
+                            &:first-child{
+                                background: url(../images/openblog.svg) no-repeat 50% 20px;
+                                @include tablet(){background: none;background-color: $purple;}
+                            }
+                            &:last-child{
+                                background: url(../images/opensponsor.svg) no-repeat 50% 20px;
+                                @include tablet(){background: none;background-color: $purple;}
+                            }
+                        }
+                    }
                 }
             }
         }

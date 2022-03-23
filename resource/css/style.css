@@ -642,6 +642,59 @@ br.mobile-only {
   color: #5F249F;
 }
 
+.cont_board.result-search {
+  margin-top: 40px;
+}
+
+@media (min-width: 768px) {
+  .cont_board.result-search {
+    margin-top: 20px;
+  }
+}
+
+.cont_board.result-search li {
+  padding: 20px 0;
+  height: auto;
+}
+
+.cont_board.result-search .title {
+  font-size: 15px;
+  line-height: 25px;
+  color: #3A3D4D;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+@media (min-width: 768px) {
+  .cont_board.result-search .title {
+    font-size: 12px;
+    line-height: 19px;
+    margin-bottom: 11px;
+  }
+}
+
+.cont_board.result-search .txt {
+  display: -webkit-box;
+  word-wrap: break-word;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  height: 66px;
+  line-height: 22px;
+  color: #828699;
+  font-size: 13px;
+}
+
+@media (min-width: 768px) {
+  .cont_board.result-search .txt {
+    -webkit-line-clamp: 2;
+    font-size: 14px;
+    line-height: 24px;
+    height: 48px;
+  }
+}
+
 .cont_gallery {
   border-top: 1px solid #D8DAE6;
 }
@@ -1378,7 +1431,6 @@ br.mobile-only {
     width: 36%;
     height: 38px;
     top: 26px;
-    right: 66px;
   }
 }
 
@@ -1498,6 +1550,22 @@ br.mobile-only {
 
 .pagination .page-item:first-child .page-link, .pagination .page-item:last-child .page-link {
   margin: 0 -5px;
+}
+
+.p-default {
+  margin-bottom: 20px;
+  color: #3A3D4D;
+  font-size: 15px;
+  line-height: 26px;
+  text-align: justify;
+}
+
+@media (min-width: 768px) {
+  .p-default {
+    font-size: 16px;
+    line-height: 28px;
+    margin-bottom: 30px;
+  }
 }
 
 header {
@@ -2863,6 +2931,118 @@ main.sub .container .cont_body article h1 {
   color: #3A3D4D;
   font-size: 20px;
   margin-bottom: 15px;
+}
+
+@media (min-width: 768px) {
+  main.sub .container .cont_body article h1 {
+    margin-bottom: 20px;
+  }
+}
+
+main.sub .container .cont_body article .summary-title {
+  font-size: 16px;
+  line-height: 25px;
+  color: #3A3D4D;
+  margin: 16px 0 21px;
+}
+
+@media (min-width: 768px) {
+  main.sub .container .cont_body article .summary-title {
+    font-size: 16px;
+    margin: 23px 0 21px;
+  }
+}
+
+main.sub .container .cont_body article .link-open {
+  margin-bottom: 40px;
+}
+
+@media (min-width: 768px) {
+  main.sub .container .cont_body article .link-open {
+    position: absolute;
+    top: 32px;
+    right: 0;
+    width: 60%;
+  }
+}
+
+main.sub .container .cont_body article .link-open ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 10px;
+}
+
+main.sub .container .cont_body article .link-open ul li {
+  width: 50%;
+  height: 120px;
+  border: 1px solid #A177D8;
+}
+
+@media (min-width: 768px) {
+  main.sub .container .cont_body article .link-open ul li {
+    height: 40px;
+    border: none;
+  }
+}
+
+main.sub .container .cont_body article .link-open ul li a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  height: 100%;
+  padding-top: 85px;
+  color: #5F249F;
+  font-size: 16px;
+}
+
+@media (min-width: 768px) {
+  main.sub .container .cont_body article .link-open ul li a {
+    padding-top: 0;
+    color: #fff;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+main.sub .container .cont_body article .link-open ul li a img {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  main.sub .container .cont_body article .link-open ul li a img {
+    display: block;
+  }
+}
+
+main.sub .container .cont_body article .link-open ul li:first-child {
+  background: url(../images/openblog.svg) no-repeat 50% 20px;
+}
+
+@media (min-width: 768px) {
+  main.sub .container .cont_body article .link-open ul li:first-child {
+    background: none;
+    background-color: #5F249F;
+  }
+}
+
+main.sub .container .cont_body article .link-open ul li:last-child {
+  background: url(../images/opensponsor.svg) no-repeat 50% 20px;
+}
+
+@media (min-width: 768px) {
+  main.sub .container .cont_body article .link-open ul li:last-child {
+    background: none;
+    background-color: #5F249F;
+  }
 }
 
 .side-menu {

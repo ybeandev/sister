@@ -223,6 +223,26 @@
         .number{color:$purple;}
         .title .memo{color:$purple;}
     }
+
+    &.result-search{
+        margin-top: 40px;
+        @include tablet(){margin-top: 20px;}
+        li{
+            padding:20px 0; height:auto;
+        }
+        .title{
+            font-size: 15px; line-height: 25px; color: $gray80; padding-top: 0; padding-bottom: 0;
+            @include tablet(){font-size: 12px; line-height: 19px;margin-bottom: 11px;}
+        }
+        .txt{
+            display:-webkit-box; word-wrap:break-word; -webkit-line-clamp:3; -webkit-box-orient:vertical; overflow:hidden; text-overflow:ellipsis; 
+            height:66px; line-height:22px; 
+            color:$gray50; font-size:13px;
+            @include tablet(){-webkit-line-clamp:2; font-size: 14px; line-height: 24px; height: 48px;}
+        }
+    }
+
+
 }
 // END 목록형 
 
@@ -542,7 +562,7 @@
     box-sizing: border-box;
     z-index: 10;
 
-    @include tablet(){position: absolute; width:36%; height: 38px; top:26px; right:66px;}
+    @include tablet(){position: absolute; width:36%; height: 38px; top:26px;}
     .search{height:100%;}
     input{
         width:calc(100% - 60px); height: 100%; border: none; padding: 10px; box-sizing: border-box;
@@ -591,3 +611,15 @@
 // END pagination
 
 // END 게시판
+
+// 문단 기본형태 ------------------------------------------------
+.p-default{
+    margin-bottom: 20px;
+    color: $gray80; font-size: 15px; line-height: 26px; text-align: justify; 
+
+    @include tablet(){
+        font-size: 16px; line-height: 28px;margin-bottom: 30px;
+    }
+}
+// END 문단 기본형태
+
