@@ -161,7 +161,7 @@ $(function(){
         console.log(_idx);
         button.parent().siblings().removeClass('active');
         $(this).parent().addClass('active');
-        tabCont.siblings().hide();
+        // tabCont.siblings().hide();
         tabCont.eq(_idx).show();
 
     })

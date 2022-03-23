@@ -438,7 +438,7 @@ main.main{
                 display: flex; position: absolute; padding:0 8px; gap: 8px;
                 width:calc(55vw * 4 + 24px);  transition: .6s;
 
-                @include tablet(){padding: 0; width: 100%; gap:20px; flex-wrap: wrap;}
+                @include tablet(){position: relative; padding: 0; width: 100%; gap:20px; flex-wrap: wrap;}
 
                 li{
                     position: relative;  height:170px; padding: 20px; margin-top: 25px;

@@ -2477,6 +2477,7 @@ main.main .issue .list ul {
 
 @media (min-width: 768px) {
   main.main .issue .list ul {
+    position: relative;
     padding: 0;
     width: 100%;
     gap: 20px;
