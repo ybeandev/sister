@@ -2447,12 +2447,10 @@ main.main .issue h2 {
 main.main .issue .list {
   position: relative;
   width: 100vw;
-  height: calc(55vw + 25px);
+  height: 195px;
   margin-left: -27px;
   padding-left: 24px;
   overflow: hidden;
-  -webkit-transition: .6s;
-  transition: .6s;
 }
 
 @media (min-width: 768px) {
@@ -2460,6 +2458,8 @@ main.main .issue .list {
     width: 100%;
     height: auto;
     overflow: inherit;
+    margin-left: 0;
+    padding-left: 0;
   }
 }
 
@@ -2467,9 +2467,12 @@ main.main .issue .list ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  position: absolute;
   padding: 0 8px;
   gap: 8px;
   width: calc(55vw * 4 + 24px);
+  -webkit-transition: .6s;
+  transition: .6s;
 }
 
 @media (min-width: 768px) {
@@ -2484,7 +2487,7 @@ main.main .issue .list ul {
 
 main.main .issue .list ul li {
   position: relative;
-  height: calc(55vw - 40px);
+  height: 170px;
   padding: 20px;
   margin-top: 25px;
   background-color: #fff;
@@ -2551,7 +2554,7 @@ main.main .etc {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   gap: 20px;
-  margin-top: 0;
+  margin-top: 40px;
 }
 
 @media (min-width: 768px) {
@@ -2676,12 +2679,14 @@ main.main .etc .paper .cont .summary .txt, main.main .etc .letter .cont .summary
   padding: 15px;
   font-size: 13px;
   height: 160px;
+  line-height: 22px;
 }
 
 @media (min-width: 768px) {
   main.main .etc .paper .cont .summary .txt, main.main .etc .letter .cont .summary .txt {
     padding: 30px;
     font-size: 16px;
+    line-height: 26px;
   }
 }
 

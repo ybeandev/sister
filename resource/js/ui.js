@@ -111,5 +111,60 @@ $(function(){
 
     // END mobile menu/search 기능 컨트롤
 
+    // main slider ================================================
+    let curPos = 0;
+    let postion = 0;
+    let start_x, end_x;
+    const IMAGE_WIDTH = $('.slider > ul > li').width() + 8 ;
+    const images = $('.slider > ul'); 
+     
+    images.on('touchstart', touch_start);
+    images.on('touchend', touch_end);
+     
+    function prev(){
+      if(curPos > 0){
+        postion += IMAGE_WIDTH;
+        images.css({'transform':`translateX(${postion}px)`});
+        curPos = curPos - 1;
+      }
+    }
+    function next(){
+      if(curPos < 3){
+        postion -= IMAGE_WIDTH;
+        images.css({'transform':`translateX(${postion}px)`});
+        curPos = curPos + 1;
+      }
+    }
+     
+    function touch_start(event) {
+      start_x = event.touches[0].pageX
+    }
+     
+    function touch_end(event) {
+      end_x = event.changedTouches[0].pageX;
+      if(start_x > end_x){
+        next();
+      }else{
+        prev();
+      }
+      console.log(end_x);
+    }
+
+    // END main slider
+
+    // main 부설기관 tab
+    const button    = $('.attached-organization .sorting li button');
+    const tabCont   = $('.attached-organization > .latest > div')
+
+    button.on('click', function(){
+        let _idx = $(this).parent().index();
+        console.log(_idx);
+        button.parent().siblings().removeClass('active');
+        $(this).parent().addClass('active');
+        tabCont.siblings().hide();
+        tabCont.eq(_idx).show();
+
+    })
+
 
 })
