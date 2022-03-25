@@ -58,6 +58,10 @@ $laptop: 992px;
     display: none;
     @include tablet(){display: block;}
 }
+.pc-span-only{
+    display: none;
+    @include tablet(){display: inline;}
+}
 .mobile-only{
     display: block;
     @include tablet(){display: none;}

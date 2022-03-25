@@ -158,12 +158,22 @@ $(function(){
 
     button.on('click', function(){
         let _idx = $(this).parent().index();
-        console.log(_idx);
         button.parent().siblings().removeClass('active');
         $(this).parent().addClass('active');
-        // tabCont.siblings().hide();
+        tabCont.siblings().hide();
         tabCont.eq(_idx).show();
+    })
 
+    // 연혁 tab
+    const buttonHistory    = $('.history-year button');
+    const tabContHistory   = $('.history > .cont')
+
+    buttonHistory.on('click', function(){
+        let _idx = $(this).parent().index();
+        buttonHistory.parent().siblings().removeClass('active');
+        $(this).parent().addClass('active');
+        tabContHistory.siblings().hide();
+        tabContHistory.eq(_idx).show();
     })
 
 
