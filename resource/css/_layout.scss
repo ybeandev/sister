@@ -782,51 +782,6 @@ footer{
 // 개별 페이지 디자인 적용
 // =============================================================================================
 
-// 조직구성 -------------------------------------
-.organzation{
-    margin:20px 0 0;width:100%;border-bottom:1px solid $gray20;
-    caption{display: none;}
-    table{
-        border-collapse: collapse;width:100%;
-        col{
-            &:nth-child(1){
-                width:20%;
-                @include tablet(){width:15%;}
-            }
-            &:nth-child(2){
-                width:auto;
-                @include tablet(){width:10%;}
-            }
-            &:nth-child(3){
-                width:0;
-                @include tablet(){width:15%;}
-            }
-            &:nth-child(4){
-                width:0;
-                @include tablet(){width:auto;}
-            }
-        }
-        th, td{
-            padding:14px 6px; border-top: none; border-bottom: 1px solid $gray20; line-height: 23px;
-            vertical-align: top; text-align:justify; white-space:normal;word-break: keep-all; font-size: 14px; color: $gray50;
-            @include tablet(){border-top: 1px solid $gray20; border-bottom:none; }
-        }
-
-        .depth1{
-            font-size: 15px; color: $purple;
-            @include tablet(){font-size: 16px;}
-            &.mt50{padding:50px 6px 14px;}
-        }
-        .depth2{
-            font-size: 15px; color: $gray80;
-            @include tablet(){font-size: 14px;}
-        }
-    }
-
-
-}
-// END 조직구성
-
 // 연혁 -----------------------------------------
 .history-year{
     margin-bottom: 32px;
@@ -890,3 +845,176 @@ footer{
     .tabcont2, .tabcont3{display: none;}
 }
 // END 연혁
+
+// 조직구성 -------------------------------------
+.organzation{
+    margin:20px 0 0;width:100%;border-bottom:1px solid $gray20;
+    caption{display: none;}
+    table{
+        border-collapse: collapse;width:100%;
+        col{
+            &:nth-child(1){
+                width:20%;
+                @include tablet(){width:15%;}
+            }
+            &:nth-child(2){
+                width:auto;
+                @include tablet(){width:10%;}
+            }
+            &:nth-child(3){
+                width:0;
+                @include tablet(){width:15%;}
+            }
+            &:nth-child(4){
+                width:0;
+                @include tablet(){width:auto;}
+            }
+        }
+        th, td{
+            padding:14px 6px; border-top: none; border-bottom: 1px solid $gray20; line-height: 23px;
+            vertical-align: top; text-align:justify; white-space:normal;word-break: keep-all; font-size: 14px; color: $gray50;
+            @include tablet(){border-top: 1px solid $gray20; border-bottom:none; }
+        }
+
+        .depth1{
+            font-size: 15px; color: $purple;
+            @include tablet(){font-size: 16px;}
+            &.mt50{padding:50px 6px 14px;}
+        }
+        .depth2{
+            font-size: 15px; color: $gray80;
+            @include tablet(){font-size: 14px;}
+        }
+    }
+
+
+}
+// END 조직구성
+
+// 오시는길 -----------------------------
+.map-center{
+    display: grid;
+    grid-template-areas: "address" "map" "summary" "navi";
+    font-size: 15px; 
+    @include tablet(){grid-template-areas: "navi" "address" "summary" "map";} 
+
+    address{
+        grid-area: address; 
+        color: $gray80; margin-bottom: 25px;
+        @include tablet(){text-align: center;margin-top: 30px;margin-bottom: 7px; font-size: 20px;}
+    }
+    .map{ 
+        grid-area: map; 
+        width:100%; height: 350px; border: 1px solid $gray100;
+        @include tablet(){width:100%; height: 460px;}
+    }
+    .addr-summary{
+        grid-area: summary; 
+        margin-top: 25px;line-height: 25px;
+        @include tablet(){text-align: center; font-size: 16px; margin-top: 0;margin-bottom: 25px;line-height: 28px;}
+    }
+    .navi{
+        grid-area: navi;
+        margin-top: 25px;
+        @include tablet(){margin-top: 3px;}
+        ul{
+            display: flex; flex-direction: column; gap: 10px;
+            @include tablet(){flex-direction: row;}
+            li{
+                display: flex; align-items: flex-start;justify-content: center;flex-direction: column;
+                height: 118px;padding-left: 38%;
+                @include tablet(){height: 127px; padding-left: 19%; width: calc(100%/2 - 5px);}
+
+                .title{margin-bottom: 5px;}
+
+                &:nth-child(1){
+                    background: $purple5 url(/resource/images/bg_train.svg) no-repeat 11% 25px;
+                    @include tablet(){background: $purple5 url(/resource/images/bg_train.svg) no-repeat 11% 31px;}
+                }
+                &:nth-child(2){
+                    background: $purple5 url(/resource/images/bg_bus.svg) no-repeat 11% 25px;
+                    @include tablet(){background: $purple5 url(/resource/images/bg_bus.svg) no-repeat 11% 33px;}
+                }
+            }
+        }
+        @include tablet(){}
+    }
+}
+// END 오시는길
+
+// 정관·규정·약속 -------------------------
+.selectpromise{
+    margin-bottom: 32px;
+    @include mobile(){margin-bottom:40px;}
+    ul{
+        display: flex; align-items: center; justify-content: space-between;
+        li{
+            width: calc(100%/3 - 3%); height: 40px;
+            button{
+                display: flex; justify-content: center; align-items: center;
+                width: 100%; height: 100%;padding:8px 7px 6px;
+                border: 1px solid $gray20; border-radius: 20px; background-color: transparent; 
+                font-size: 15px; color: $gray50;
+            }
+            
+            &.active button{background-color: $purple; color:#fff;}
+        }
+    }
+}
+
+.promise{
+
+    h2{font-size: 15px; line-height: 26px; color: $purple;}
+    // 정관, 규정 스타일
+    .tabcont1, .tabcont2{
+        font-size: 15px; line-height: 26px; color: $gray80; font-weight: 100;
+        @include tablet(){font-size: 16px;}
+        h3{
+            margin-top: 20px; font-size: 15px; line-height: 26px; color: $gray80; font-weight: 500;
+            @include tablet(){font-size: 16px;}
+        }
+
+        ul{
+            & > li{
+                margin-left: 15px; text-indent: -15px; line-height: 26px;
+                @include tablet(){margin-left: 30px; text-indent: -30px;}
+            }
+        }
+    }
+
+    // 약속
+    .tabcont3{
+        .summary{
+            padding: 20px;margin-top: 10px;
+            border:1px solid $gray20;
+            font-size: 13px; line-height: 24px; color: $gray80; font-weight: 100;
+            @include tablet(){font-size: 14px;}
+            li{
+                position: relative; padding-left: 10px;
+                &::before{
+                    content: "·"; 
+                    position: absolute; top:0; left:0;
+                    font-size: 20px;
+                }
+            }
+        }
+
+        .list-promise{
+            margin-top: 20px;
+            dl{
+                display: grid; grid-template-columns: 45px auto; gap:15px;
+                font-size: 15px; line-height: 26px; font-weight: 100;
+                @include tablet(){font-size: 16px; line-height: 29px;}
+
+                dt, dd{
+                    display: flex; justify-content: center; align-items: center;
+                    background-color: $purple5; padding:10px; 
+                }
+                dd{justify-content: flex-start;}
+            }
+        }
+    }
+
+    .tabcont1, .tabcont2{display: none;}
+}
+// END 정관·규정·약속

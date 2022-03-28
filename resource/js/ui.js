@@ -176,5 +176,17 @@ $(function(){
         tabContHistory.eq(_idx).show();
     })
 
+    // 정관·규정·약속 tab
+    const buttonPromise    = $('.selectpromise button');
+    const tabContPromise   = $('.promise > .cont')
+
+    buttonPromise.on('click', function(){
+        let _idx = $(this).parent().index();
+        buttonPromise.parent().siblings().removeClass('active');
+        $(this).parent().addClass('active');
+        tabContPromise.siblings().hide();
+        tabContPromise.eq(_idx).show();
+    })
+    
 
 })
