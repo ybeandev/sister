@@ -1015,6 +1015,124 @@ footer{
         }
     }
 
-    .tabcont1, .tabcont2{display: none;}
+    .tabcont2, .tabcont3{display: none;}
 }
 // END 정관·규정·약속
+
+// 비전선언문 ----------------------------
+.declaration{
+    .video {
+        width: calc(100% + 48px) ; max-width: 900px; margin: 20px auto 30px -24px; 
+        background-color: #f0f0f0; box-sizing: border-box;
+        @include tablet(){width: 100%; margin: 30px auto;}
+    }
+       
+    .video-container {position: relative;width: 100%;height: auto;padding-top: 56.25%;}
+       
+    iframe {
+        position: absolute;top: 0;left: 0;z-index: 1;
+        width: 100%;height: 100%;
+    }
+
+    .cont{
+        h2{
+            color:$purple; font-size: 20px; font-weight: 600; line-height: 30px;
+            @include tablet(){line-height: 32px;}
+        }
+
+        .txt{
+            margin-top: 10px;
+            font-weight: 400; font-size: 14px; line-height: 26px; letter-spacing: -1px;
+            @include tablet(){font-size: 16px; line-height: 29px;}
+        }
+    }
+
+}
+// END 비전선언문
+
+// 상담·지지 공통 스타일 -----------------
+.counsel{
+    .cont-counsel{
+        display: flex; justify-content: space-between; flex-direction: column; gap: 25px;
+        margin-top: -1px; padding:25px 0;
+        border: 1px solid $gray20; border-left: none; border-right: none;
+        @include tablet(){flex-direction: row;}
+
+        .title{
+            width: 100%;
+            @include tablet(){width:25%;}
+
+            h2{
+                font-size: 15px; line-height: 26px; font-weight: 600; color: $purple;
+                 @include tablet(){font-size: 20px; line-height: 28px; font-weight: 400;}
+            }
+
+        }
+
+        .txt{
+            width: 100%;
+            font-size: 15px; font-weight: 400; line-height: 26px; letter-spacing: -1px;
+
+            @include tablet(){width: calc(100% - 25%); font-size: 16px; line-height: 29px; letter-spacing: -1px;}
+            // 성폭력의 개념 상단 스타일 
+            .list{
+                dt{color: $purple;}
+                dd{margin-bottom: 15px;}
+
+                &.box dt{
+                    padding-left: 10px; font-weight: 400;
+                    background-color: $purple5; 
+                }
+            }
+
+            .txt_strong{margin: 0 0 25px;}
+        }
+        .mt25{margin: 25px 0 !important;}
+        p{margin: 25px 0;}
+        .hor{width:100%; height: 1px; background-color: $gray20; margin: 25px 0;}
+    }
+
+    h3{
+        font-size: 15px; font-weight: 600; line-height: 26px;
+        @include tablet(){margin:30px 0 25px; font-size: 20px; line-height: 29px;}
+    }
+
+    .dot{
+        margin-top: 10px;
+        font-size: 13px; line-height: 24px; color: $gray80; font-weight: 100;
+        @include tablet(){font-size: 16px;line-height: 29px; }
+        li{
+            position: relative; padding-left: 10px;
+            &::before{
+                content: "·"; 
+                position: absolute; top:0; left:0;
+                font-size: 20px;
+            }
+        }
+    }
+
+    // 링크
+    .link{
+        margin-bottom: 40px;
+        ul{
+            display: flex; justify-content: space-between; gap:10px; flex-wrap: wrap;
+            
+            li{
+                width: 100%; height: 40px;
+                background-color: $purple;
+                @include tablet(){width: calc(50% - 5px);}
+                a{
+                    display: flex; justify-content: center; align-items: center;
+                    width: 100%; height: 100%;
+                    color: #fff; font-size: 16px;
+                }
+            }
+        }
+    }
+    
+    .source{
+        display: none;
+        @include tablet(){display: block; position: absolute; top:50px; right: 0; font-size: 14px; color: $gray50;}
+    }
+}
+// END 상담·지지 공통 스타일

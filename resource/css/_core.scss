@@ -90,6 +90,13 @@ br.mobile-only{
     }
 }
 
+// mobile BR 적용
+br.pc-only{
+    display: none;
+    @include mobile{
+          display: block;
+    }
+}
 // 컬럼 분할 =======================================================================
 .column{
     display: flex; gap:24px; flex-direction: column;

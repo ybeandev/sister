@@ -1,0 +1,350 @@
+ <!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>한국성폭력상담소</title>
+    <link rel="stylesheet" href="./resource/css/bootstrap/bootstrap.css"> 
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+    <link rel="stylesheet" href="./resource/css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> 
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+    <script src="./resource/js/ui.js"></script>
+</head>
+<body>
+    <header>
+        <div class="container-fluid lnb">
+            <div class="container">
+                <a href="/">Home</a> / <a href="#">소개</a> / <a href="#" class="current">재정현황</a>
+            </div>
+        </div>
+        <div class="container-fluid snb">
+            <div class="container">
+                <div class="bookmark pc-only">
+                    <ul>
+                        <li><a href="http://yeolim.or.kr/">열림터</a></li>
+                        <li><a href="">울림</a></li>
+                        <li>
+                            <select name="" id="linkOutsite" class="form-control">
+                                <option>관련사이트</option>
+                                <option value="">성폭력생존자말하기대회</option>
+                                <option value="">밤길되찾기시위</option>
+                                <option value="">할 말 많은 UCC행동단</option>
+                            </select>    
+                        </li>
+                    </ul>
+                </div>
+                <div class="sub-link">
+                    <a href="" class="pc-only">ENGLISH</a>
+                    <div class="btn-search">
+                        <a class="search-trigger" href="#" title="검색 열고 닫기">
+                            <span> </span>
+                            <span> </span>
+                        </a>
+                    </div>
+                    <div class="btn-menu mobile-only">
+                        <a class="menu-trigger" href="#" title="메뉴 열고 닫기">
+                            <span> </span>
+                            <span> </span>
+                            <span> </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid gnb">
+            <div class="container">
+                <h1><img src="./resource/images/logo.png" alt="한국성폭력상담소"></h1>
+                <nav>
+                    <h2>주메뉴</h2>
+                    <ul class="mobile-menu">
+                        <li><a href="">소개</a>
+                            <ul>
+                                <li><a href="">한국성폭력상담소</a></li>
+                                <li><a href="">연혁과 조직구성</a></li>
+                                <li><a href="">오시는길</a></li>
+                                <li><a href="">재정현황</a></li>
+                                <li><a href="">정관·규정·약속</a></li>
+                                <li><a href="">비전선언문</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="">공지</a>
+                            <ul>
+                                <li><a href="">사무공지</a></li>
+                                <li><a href="">행사참여안내</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="">활동</a>
+                            <ul>
+                                <li><a href="">성문화운동</a></li>
+                                <li><a href="">법·제도 변화</a></li>
+                                <li><a href="">성폭력 사안대응</a></li>
+                                <li><a href="">연구·교육</a></li>
+                                <li><a href="">회원활동</a></li>
+                                <li><a href="">생존자 역량강화</a></li>
+                                <li><a href="">여성·인원·국제연대</a></li>
+                            </ul>
+                        </li>
+                        <li class="active"><a href="">상담·지지</a>
+                            <ul>
+                                <li><a href="">성폭력이란</a>
+                                    <ul>
+                                        <li><a href="">성폭력의 개념</a></li>
+                                        <li><a href="">성폭력의 대응</a></li>
+                                        <li><a href="">성문화와 성폭력</a></li>
+                                        <li><a href="">통념 점검하기</a></li>
+                                        <li><a href="">함께 고민하기</a></li>
+                                    </ul>
+                                </li>
+                                <li><a href="">상담 통계</a></li>
+                                <li><a href="">상담지원안내</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="">열림터</a>
+                            <ul>
+                                <li><a href="">열림터소개</a></li>
+                                <li><a href="">열림터소식</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="">울림</a>
+                            <ul>
+                                <li><a href="">울림소개</a></li>
+                                <li><a href="">울림소식</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="">자료</a>
+                            <ul>
+                                <li><a href="">발간물</a></li>
+                                <li><a href="">소식지</a></li>
+                                <li><a href="">뉴스레터</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="">후원</a>
+                            <ul>
+                                <li><a href="">후원안내</a></li>
+                                <li><a href="">특별한 후원</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
+        <div class="container div-search">
+            <div class="search">
+                <input type="text" placeholder="검색어를 입력하세요.">
+                <button type="button" title="검색하기" class="btn-search2">
+                    <span> </span>
+                    <span> </span>
+                </button>
+            </div>
+        </div>
+    </header>
+    <main class="sub container-fluid">
+        <div class="container">
+            <div class="mnb">
+                <h2>상담·지지</h2>
+                <ul>
+                    <li><a href="">성폭력이란</a>
+                        <ul>
+                            <li><a href="">성폭력의 개념</a></li>
+                            <li><a href="">성폭력의 대응</a></li>
+                            <li><a href="">성문화와 성폭력</a></li>
+                            <li><a href="">통념 점검하기</a></li>
+                            <li><a href="">함께 고민하기</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="">상담 통계</a></li>
+                    <li><a href="">상담지원안내</a></li>
+                </ul>
+            </div>
+            <div class="cont_body">
+                <article class="counsel">   
+                    <h1>성폭력이란 - 성폭력의 대응</h1>
+                    
+                    <section class="cont-counsel">
+                        <div class="title">
+                            <h2>상황 인식하기</h2>
+                        </div>
+                        <div class="txt">
+                            <dl class="list box">
+                                <dt>나의 건강상태</dt>
+                                <dd>
+                                    <ul class="dot">
+                                        <li>피해로 입은 외상이나 내상은 없는지 살펴봅니다. 식사나 수면의 변화는 없는지, 피해로 인해 발생한 나의 감정은 어떠한지 그로 인해 일상생활에. 미친 영향이 무엇인지 생각해봅니다.</li>
+                                        <li>다른 사람들이 해치거나 비난할 것이라는 불안이 있나요?</li>
+                                    </ul>
+                                </dd>
+                                <dt>피해가 나에게 미친 사회적 영향</dt>
+                                <dd>
+                                    <ul class="dot">
+                                        <li>피해로 입은 외상이나 내상은 없는지 살펴봅니다. 식사나 수면의 변화는 없는지, 피해로 인해 발생한 나의 감정은 어떠한지 그로 인해 일상생활에. 미친 영향이 무엇인지 생각해봅니다.</li>
+                                        <li>다른 사람들이 해치거나 비난할 것이라는 불안이 있나요?</li>
+                                    </ul>
+                                </dd>
+                                <dt>사건의 정황 정리하기</dt>
+                                <dd>
+                                    <ul class="dot">
+                                        <li>사건 후 피해 상황을 떠올리는 것이 힘들 수 있지만, 기억이 퇴색하거나 왜곡되기 전에 정리해 두는 것도 중요합니다. 피해가 언제 어디에서 어떻게 일어났는지, 가해자와 어떤 관계인지, 몇 번이나 반복됐는지 피해 당시의 상황을 기억나는 대로 자세히 기록해봅시다. 가해자가 한 말이나 행동, 인상착의나 신체적 특징 등도 기록해두세요. 이 때 기록해둔 자료는 나중에 법적 대응을 하거나 해결을 시도할 때 다양한 방면에서 도움이 됩니다., 혼자 기록하는게 힘들다면 상담을 통해 함께 정리해볼 수도 있습니다. </li>
+                                        <li>피해 극복에 발휘할 수 있는 나의 힘은 무엇일까요? 피해 대응에 쓸 수 있는 시간은 어느 정도인가요?</li>
+                                        <li>가해자로부터 지속적 성폭력, 협박 등의 피해를 입고 있나요?</li>
+                                    </ul>
+                                </dd>
+                            </dl>
+                        </div>
+                    </section>
+                    
+                    
+                    
+                    <section class="cont-counsel">
+                        <div class="title">
+                            <h2>원하는 해결에 집중하기</h2>
+                        </div>
+                        <div class="txt">
+                            <p class="txt_strong">
+                                내가 원하는 것을 정하고 집중하는 것이 중요한 이유는 방향을 잃지 않고 더 만족스럽게 해결하기 위해서입니다. 원하는 해결 방식 여러 가지가 동시에 떠오를 수 있는데, 구체적이고 상세하면 더욱 좋습니다. 내가 원하는 해결방식에 대해 스스로 질문해보세요. 
+                            </p>
+                            <ul class="dot">
+                                <li>병원치료가 필요하다</li>
+                                <li>상담이 필요하다</li>
+                                <li>법적 지원이 필요하다</li>
+                                <li>정확한 정보가 필요하다</li>
+                                <li>가해자를 처벌하고 싶다</li>
+                                <li>가해자에게 피해 보상을 받고 싶다</li>
+                                <li>학교, 회사, 모임 등 내가 속한 곳에서 가해자에게 징계 조치를 했으면 좋겠다</li>
+                                <li>가족, 친구, 애인 등 가까운 사람들이 내 편이 돼서 나를 위해 함께 행동해주면 좋겠다.</li>
+                            </ul>
+                            <ul class="dot">
+                                <li>필요한 지원에 대해서 생각해보기, 심리적 지지 또는 치유</li>
+                                <li>가해자에게 요구할 내용</li>
+                                <li>처벌유무, 손해배상</li>
+                                <li>바꾸고 싶은 환경 생각하기, 소속집단의 문화 바꾸기</li>
+                                <li>가해자의 법적 처벌, 사과</li>
+                                <li>불법촬영물 삭제</li>
+                                <li>피해 공론화 등</li>
+                            </ul>
+                            <p class="txt_strong mt25">정답은 없습니다. 자신의 피해를 회복하는 데 필요한 해결방식을 자유롭게 생각해봅시다. </p>
+                        </div>
+                    </section>
+ 
+                    <section class="cont-counsel">
+                        <div class="title">
+                            <h2>해결방법의 장점과 <br class="pc-only">어려움 검토</h2>
+                        </div>
+                        <div class="txt">
+                            <p class="txt_strong">해결 방법에는 크게 가해자와 개인적으로 해결하는 방법과 사법 제도, 정부 기관, 학교, 회사 등 소속 공간의 제도나 관련기구를 이용하는 제도적 해결 방법이 있습니다. 적합한 방법을 선택하기 위해 먼저 다양한 해결법을 떠올려 나열해봅시다. </p>
+                            <dl class="list box">
+                                <dt>개인적 해결 </dt>
+                                <dd>
+                                    <ul class="dot">
+                                        <li>가해자의 연락이나 접근 금지하기</li>
+                                        <li>이사나 전근, 전학 등을 요구하기</li>
+                                        <li>소문을 내지 못하게 하기</li>
+                                        <li>사과문 받기</li>
+                                        <li>관련 사진이나 자료 파기하기</li>
+                                        <li>공개 사과문 게시하기</li>
+                                        <li>가해자 교육이나 사회 봉사 이수하기</li>
+                                        <li>합의 등 구체적 방법 검토하기, 가해자가 약속을 어길 시 대처에 대해 생각하기</li>
+                                    </ul>
+                                </dd>
+                                <dt>법적ㆍ제도적ㆍ조직적 해결</dt>
+                                <dd>
+                                    <ul class="dot">
+                                        <li>형사고소, 민사소송에 대해서 고려하기</li>
+                                        <li>직장 내 성희롱 문제는 노동부나 국가인권위원회 등 관련 행정 부처 통해 구제 신청을 하거나 고충처리기구, 노조 등 담당 부서나 관련 기구에 신고</li>
+                                        <li>학교 안에서 겪은 문제라면 학내 성폭력상담소, 인권센터, 또는 학생자치조직에 상담</li>
+                                        <li>소속 집단 내의 해결을 위한 절차, 근거 규정, 지지집단에 대해 고민하기</li>
+                                        <li>절차, 소요되는 시간, 공소시효, 증거수집 가능성과 방법에 대해 알아보기</li>
+                                    </ul>
+                                </dd>
+                            </dl>
+                        </div>
+                    </section>
+
+                    <section class="cont-counsel">
+                        <div class="title">
+                            <h2>주변 지지체계 검토 <br class="pc-only">자신의 강점 파악</h2>
+                        </div>
+                        <div class="txt">
+                            <p class="txt_strong">신뢰할 만한 주변 사람이나 전문 기관, 단체를 통틀어 ‘주변 지지 체계’라고 한다면, 지지 체계는 성폭력 해결 과정에서 큰 버팀목이 될 수 있습니다. 그러나 주변 사람이 사건 해결의 주인공은 아닙니다. 사건 해결의 중심에 선 것은 어디까지 피해자 자신입니다. 
+                                이 점을 염두에 두고 내가 미처 생각하지 못한 부분을 검토할 사람을 찾도록 합시다</p>
+                            <ul class="dot">
+                                <li>자신이 어려운 문제를 해결해온 방식과 자신의 강점 찾기</li>
+                                <li>내가 신뢰할 수 있고, 나의 말을 지지하며 들어줄 사람은 누구인가요?</li>
+                                <li>가해자 대응과정에서 도와줄 사람은 ?</li>
+                                <li>도움을 받을 수 있는 기관은?</li>
+                                <li>성폭력상담소는 비밀을 보장할 의무가 있으므로 피해시기, 장소, 당시 정황, 지속성, 의료적 필요 여부, 가해자와 피해자의 관계, 증인, 증거 유무와 내용을 알리고 논의할 수 있습니다.</li>
+                            </ul>
+                            <p class="txt_strong mt25">그리고 혹여나 자신의 대응이 부족했다고 생각하기보다 자신이 해온 모든 것들이 자신의 힘을 발휘했던 과정이라는 것을 먼저 생각하고, 내 안에 숨어있는 힘과 강점을 발견하여 앞으로 할 수 있는 일을 그려봅니다.</p>
+                        </div>
+                    </section>
+
+                    <section class="cont-counsel">
+                        <div class="title">
+                            <h2>사건해결의 목표와 한계 <br class="pc-only">결정하기</h2>
+                        </div>
+                        <div class="txt">
+                            <p class="txt_strong">해결의 방향을 잡았다면 구체적인 목표를 설정해봅시다. 가해자에게 조치할 수 있는 목표도 가능하고, 나 자신을 위한 조치가 목표가 될 수도 있습니다. 목표는 구체적으로 설정해야 나중에 달성됐는지 스스로 판단할 수 있습니다. </p>
+                            <ul class="dot">
+                                <li>가해자가 반성문을 써서 제출하게 하자</li>
+                                <li>내 마음이 안정되고, 일상생활을 제대로 할 수 있을 때까지 심리상담을 받자</li>
+                            </ul>
+                            <p class="txt_strong mt25">목표만큼이나 한계를 검토하는 것도 중요합니다. 법적인 한계와 같은 외부적인 조건뿐만 아니라, 주변에 알리고 싶지 않다거나 일상에 지장이 생기면 안되는 상황 등의 내적인 조건이 있을 수 있습니다. 이런 한계 설정도 구체적으로 설정해야 합니다. 그래야 일이 잘 풀리지 않더라도 조바심 내지 않고 내가 감수하고 포기할 부분에 대해 마음을 편안하게 다잡을 수 있습니다. 좌절하기 위해 세우는 한계가 아니라, 나를 보호하기 위해 세우는 한계라고 생각하면 좋겠습니다. </p>
+                        </div>
+                    </section>
+                    
+                    <h3>더 알아보기</h3>
+
+                    <div class="link">
+                        <ul>
+                            <li><a href="">성폭력피해자 법률지원 안내서<img src="/resource/images/link.svg" alt=""></a></li>
+                            <li><a href="">성폭력 피해자를 위한 DIY 가이드: 보통의 경험 <img src="/resource/images/link.svg" alt=""></a></li>
+                            <li><a href="">사이버성폭력 피해자 지원을 위한 안내서 <img src="/resource/images/link.svg" alt=""></a></li>
+                        </ul>
+                    </div>
+
+                    <div class="source">출처: 한국성폭력상담소, <보통의 경험: 성폭력 피해자를 위한 DIY 가이드 >, 2011</div>
+                </article>
+            </div>
+        </div>
+    </main>
+    <footer class="container-fluid ">
+        <div class="container">
+            <div class="companyinfo">
+                <ul>
+                    <li><a href="">개인정보취급방침</a> <a href="">고유식별정보(주민번호)취급방침</a></li>
+                    <li>서울시 마포구 성지1길 32-42 (합정동 366-24) 2층 (우) 04072</li>
+                    <li>사무전화 <a href="tel:+82-2-338-2890">02-338-2890~2</a> 상담전화<a href="tel:+82-2-338-5801">02-338-5801</a>  <br class="mobile-only">팩스<a href="tel:+82-2-338-7122">02-338-7122</a> 이메일<a href="mailto:ksvrc@sisters.or.kr">ksvrc@sisters.or.kr</a></li>
+                    <li>부설 쉼터 열림터 <a href="tel:+82-2-338-3562">02-338-3562</a> 부설 연구소 울림 <a href="tel:+82-2-338-2829">02-338-2829</a></li>
+                </ul>
+            </div>
+
+            <div class="social-copy">
+                <ul>
+                    <li class="sns">
+                        <ul>
+                            <li><a href="#"><img src="resource/images/sns-blog.svg" alt="">블로그</a></li>
+                            <li><a href="#"><img src="resource/images/sns-facebook.svg" alt="">페이스북</a></li>
+                            <li><a href="#"><img src="resource/images/sns-tweet.svg" alt="">트위터</a></li>
+                            <li><a href="#"><img src="resource/images/sns-youtube.svg" alt="">유튜브</a></li>
+                            <li><a href="#"><img src="resource/images/sns-happybean.svg" alt="">해피빈</a></li>
+                        </ul>
+                    </li>
+                    <li>본 홈페이지에 게시된 이메일 주소 자동 수집을 거부하며, 이를 위반 시 정보통신법에 의하여 처벌됨을 유념하시기 바랍니다.</li>
+                    <li>Copyright(c)2022 사단법인 한국성폭력상담소 All Right Reserved.</li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+    <aside class="side-menu">
+        <ul>
+            <li><a href="">상담소 후원</a></li>
+            <li><a href="">열림터 후원</a></li>
+            <li><a href="">재정현황</a></li>
+            <li><a href="">교육문의</a></li>
+        </ul>
+    </aside>
+    <div class="dimmed"></div>
+</body>
+</html>
