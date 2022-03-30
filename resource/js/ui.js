@@ -188,5 +188,15 @@ $(function(){
         tabContPromise.eq(_idx).show();
     })
     
+    // 성폭력이란-함께고민하기 tab
+    const buttonCounsel    = $('.tabindex button');
+    const tabContCounsel   = $('.tabcont > .divtab')
 
+    buttonCounsel.on('click', function(){
+        let _idx = $(this).parent().index();
+        buttonCounsel.parent().siblings().children().removeClass('active');
+        $(this).addClass('active');
+        tabContCounsel.siblings().hide();
+        tabContCounsel.eq(_idx).show();
+    })
 })

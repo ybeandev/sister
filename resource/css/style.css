@@ -116,6 +116,7 @@ hr {
 
 body {
   font-family: "NanumBarunGothic";
+  font-weight: 100;
 }
 
 .pc-only {
@@ -4045,7 +4046,7 @@ footer .social-copy .sns ul li:last-child > a {
 
 @media (min-width: 768px) {
   .counsel .cont-counsel .title {
-    width: 25%;
+    width: 26%;
   }
 }
 
@@ -4067,14 +4068,13 @@ footer .social-copy .sns ul li:last-child > a {
 .counsel .cont-counsel .txt {
   width: 100%;
   font-size: 15px;
-  font-weight: 400;
   line-height: 26px;
   letter-spacing: -1px;
 }
 
 @media (min-width: 768px) {
   .counsel .cont-counsel .txt {
-    width: calc(100% - 25%);
+    width: calc(100% - 26%);
     font-size: 16px;
     line-height: 29px;
     letter-spacing: -1px;
@@ -4099,19 +4099,227 @@ footer .social-copy .sns ul li:last-child > a {
   margin: 0 0 25px;
 }
 
-.counsel .cont-counsel .mt25 {
-  margin: 25px 0 !important;
+.counsel .cont-counsel .txt .txt_bold {
+  font-weight: 400;
 }
 
-.counsel .cont-counsel p {
-  margin: 25px 0;
+.counsel .cont-counsel2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-top: -1px;
+  padding: 0;
+  margin-bottom: 23px;
+  border: 1px solid #D8DAE6;
 }
 
-.counsel .cont-counsel .hor {
+@media (min-width: 768px) {
+  .counsel .cont-counsel2 {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    gap: 25px;
+    padding: 25px 0;
+    margin-bottom: 0;
+    border-left: none;
+    border-right: none;
+  }
+}
+
+.counsel .cont-counsel2 .title {
   width: 100%;
-  height: 1px;
-  background-color: #D8DAE6;
-  margin: 25px 0;
+  height: 160px;
+  background: #F7F3FD url(../images/ico_cross.svg) no-repeat 50% 50%;
+  background-size: auto 60%;
+}
+
+@media (min-width: 768px) {
+  .counsel .cont-counsel2 .title {
+    width: 34%;
+    height: 234px;
+  }
+}
+
+.counsel .cont-counsel2 .title h2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 100%;
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 400;
+  color: #5F249F;
+  text-align: center;
+}
+
+.counsel .cont-counsel2 .txt {
+  width: 100%;
+  font-size: 15px;
+  line-height: 26px;
+  letter-spacing: -1px;
+  padding: 20px;
+}
+
+@media (min-width: 768px) {
+  .counsel .cont-counsel2 .txt {
+    width: calc(100% - 40%);
+    padding: 20px 0;
+    font-size: 16px;
+    line-height: 29px;
+    letter-spacing: -1px;
+  }
+}
+
+.counsel.counseltab .tabindex ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 8px;
+  border-bottom: 2px solid #5F249F;
+}
+
+.counsel.counseltab .tabindex ul li {
+  width: calc(50% - 4px);
+  height: 80px;
+}
+
+.counsel.counseltab .tabindex ul li button {
+  width: 100%;
+  height: 100%;
+  background-color: #F7F3FD;
+  color: #5F249F;
+  font-size: 20px;
+  line-height: 28px;
+  font-weight: 400;
+}
+
+.counsel.counseltab .tabindex ul li button.active {
+  background-color: #5F249F;
+  color: #fff;
+}
+
+@media (min-width: 768px) {
+  .counsel.counseltab .tabcont {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 30px;
+  }
+}
+
+.counsel.counseltab .tabcont .divtab {
+  width: 100%;
+}
+
+@media (min-width: 768px) {
+  .counsel.counseltab .tabcont .divtab {
+    width: calc(50% - 15px);
+  }
+}
+
+.counsel.counseltab .tabcont .divtab h2 {
+  margin-top: 32px;
+  font-size: 28px;
+  font-weight: 400;
+  line-height: 45px;
+  color: #5F249F;
+  text-align: center;
+}
+
+.counsel.counseltab .tabcont .divtab .box {
+  margin-top: 15px;
+  padding: 18px 20px;
+  border: 1px solid #D8DAE6;
+  font-size: 15px;
+  line-height: 26px;
+}
+
+@media (min-width: 768px) {
+  .counsel.counseltab .tabcont .divtab .box {
+    margin-top: 20px;
+    padding: 15px 40px;
+    font-size: 16px;
+    line-height: 29px;
+  }
+}
+
+.counsel.counseltab .cont2 {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .counsel.counseltab .cont2 {
+    display: block;
+  }
+}
+
+.counsel.info .txt {
+  margin-bottom: 25px;
+  font-size: 15px;
+  line-height: 26px;
+}
+
+@media (min-width: 768px) {
+  .counsel.info .txt {
+    font-size: 16px;
+    line-height: 29px;
+  }
+}
+
+@media (min-width: 768px) {
+  .counsel.info .counsel_info ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 10px;
+  }
+}
+
+.counsel.info .counsel_info ul li {
+  width: 100%;
+  height: 156px;
+  padding: 18px 20px;
+  margin-bottom: 20px;
+  border: 1px solid #D8DAE6;
+  font-size: 15px;
+  line-height: 26px;
+}
+
+@media (min-width: 768px) {
+  .counsel.info .counsel_info ul li {
+    margin-bottom: 45px;
+    width: calc(50% - 15px);
+    font-size: 16px;
+    line-height: 23px;
+  }
+}
+
+.counsel.info .counsel_info ul li h2 {
+  color: #5F249F;
+  font-size: 15px;
+  line-height: 26px;
+}
+
+@media (min-width: 768px) {
+  .counsel.info .counsel_info ul li h2 {
+    font-size: 16px;
+    line-height: 23px;
+  }
 }
 
 .counsel h3 {
@@ -4213,5 +4421,20 @@ footer .social-copy .sns ul li:last-child > a {
     font-size: 14px;
     color: #828699;
   }
+}
+
+.counsel .mt25 {
+  margin: 25px 0 !important;
+}
+
+.counsel p {
+  margin: 25px 0;
+}
+
+.counsel .hor {
+  width: 100%;
+  height: 1px;
+  background-color: #D8DAE6;
+  margin: 25px 0;
 }
 /*# sourceMappingURL=style.css.map */

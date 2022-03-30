@@ -1060,7 +1060,7 @@ footer{
 
         .title{
             width: 100%;
-            @include tablet(){width:25%;}
+            @include tablet(){width:26%;}
 
             h2{
                 font-size: 15px; line-height: 26px; font-weight: 600; color: $purple;
@@ -1071,9 +1071,9 @@ footer{
 
         .txt{
             width: 100%;
-            font-size: 15px; font-weight: 400; line-height: 26px; letter-spacing: -1px;
+            font-size: 15px; line-height: 26px; letter-spacing: -1px;
 
-            @include tablet(){width: calc(100% - 25%); font-size: 16px; line-height: 29px; letter-spacing: -1px;}
+            @include tablet(){width: calc(100% - 26%); font-size: 16px; line-height: 29px; letter-spacing: -1px;}
             // 성폭력의 개념 상단 스타일 
             .list{
                 dt{color: $purple;}
@@ -1086,17 +1086,118 @@ footer{
             }
 
             .txt_strong{margin: 0 0 25px;}
+            .txt_bold{font-weight: 400;}
         }
-        .mt25{margin: 25px 0 !important;}
-        p{margin: 25px 0;}
-        .hor{width:100%; height: 1px; background-color: $gray20; margin: 25px 0;}
     }
 
+    // 성폭력이란 - 성문화와 성폭력
+    .cont-counsel2{
+        display: flex; justify-content: space-between; flex-direction: column; 
+        margin-top: -1px; padding:0; margin-bottom: 23px;
+        border: 1px solid $gray20; 
+        @include tablet(){flex-direction: row; gap: 25px; padding:25px 0; margin-bottom: 0; border-left: none; border-right: none;}
+
+        .title{
+            
+            width: 100%; height:160px;
+            background:$purple5 url(../images/ico_cross.svg) no-repeat 50% 50%;
+            background-size: auto 60%; 
+            @include tablet(){width:34%; height: 234px;}
+
+            h2{
+                display: flex; justify-content: center; align-items: center;
+                width: 100%; height: 100%;
+                font-size: 20px; line-height: 28px; font-weight: 400; color: $purple; text-align: center;
+            }
+
+        }
+
+        .txt{
+            width: 100%;
+            font-size: 15px; line-height: 26px; letter-spacing: -1px; padding:20px;
+
+            @include tablet(){width: calc(100% - 40%); padding:20px 0; font-size: 16px; line-height: 29px; letter-spacing: -1px;}
+        }
+
+    }
+
+    // 성폭력이란 - 함께 고민하기
+    &.counseltab{
+        
+        // mobile tab
+        .tabindex{
+            ul{
+                display: flex; gap:8px; border-bottom: 2px solid $purple;
+                li{
+                    width:calc(50% - 4px); height: 80px;
+                    
+                    button{
+                        width:100%; height: 100%;
+                        background-color: $purple5; color: $purple;
+                        font-size: 20px; line-height: 28px; font-weight: 400;
+                        &.active{background-color: $purple; color: #fff;}
+                    }
+                }
+            }
+        }
+
+        .tabcont{
+            
+            @include tablet(){display: flex; gap:30px;}
+            .divtab{
+
+                width:100%;
+                @include tablet(){width:calc(50% - 15px);}
+                h2{margin-top: 32px; font-size: 28px; font-weight: 400; line-height: 45px; color: $purple; text-align: center;}
+                .box{
+                    margin-top: 15px; padding:18px 20px;
+                    border:1px solid $gray20; 
+                    font-size: 15px; line-height: 26px;
+                    @include tablet(){margin-top: 20px; padding:15px 40px;font-size: 16px; line-height: 29px;}
+                }
+            }
+        }
+
+        .cont2{
+            display: none;
+            @include tablet(){display: block;}
+        }
+    }
+
+    // 상담지원안내
+    &.info{
+        .txt{
+            margin-bottom: 25px;
+            font-size: 15px; line-height: 26px; 
+            @include tablet(){font-size: 16px; line-height: 29px;}
+        }
+
+        .counsel_info ul{
+            
+            @include tablet(){display: flex; gap:10px;}
+
+            li{
+                width:100%; height: 156px; padding:18px 20px;margin-bottom: 20px;
+                border:1px solid $gray20; 
+                font-size: 15px; line-height: 26px; 
+                @include tablet(){margin-bottom: 45px; width:calc(50% - 15px);font-size: 16px; line-height: 23px;}
+
+                h2{
+                    color: $purple;
+                    font-size: 15px; line-height: 26px; 
+                    @include tablet(){font-size: 16px; line-height: 23px;}
+                }
+            }
+        }
+    }
+
+    // 더 알아보기
     h3{
         font-size: 15px; font-weight: 600; line-height: 26px;
         @include tablet(){margin:30px 0 25px; font-size: 20px; line-height: 29px;}
     }
 
+    // point list style
     .dot{
         margin-top: 10px;
         font-size: 13px; line-height: 24px; color: $gray80; font-weight: 100;
@@ -1130,9 +1231,14 @@ footer{
         }
     }
     
+    // 출처 표기
     .source{
         display: none;
         @include tablet(){display: block; position: absolute; top:50px; right: 0; font-size: 14px; color: $gray50;}
     }
+
+    .mt25{margin: 25px 0 !important;}
+    p{margin: 25px 0;}
+    .hor{width:100%; height: 1px; background-color: $gray20; margin: 25px 0;}
 }
 // END 상담·지지 공통 스타일
