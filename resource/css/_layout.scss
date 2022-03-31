@@ -779,8 +779,35 @@ footer{
     }
 }
 
+.hor{width:100%; height: 1px; background-color: $gray20; margin: 25px 0;}
+
 // 개별 페이지 디자인 적용
 // =============================================================================================
+
+// 한국성폭력상담소 -------------------------------
+.info-visual ul{
+    display: flex; flex-wrap: wrap; gap:10px; justify-content: flex-start;
+    @include tablet(){gap:15px; justify-content: center;}
+    li{
+        width:100%;
+        @include tablet(){width:calc(100%/3 - 10px);}
+
+        .img{
+            display: flex; justify-content: center; align-items: center; 
+            height: 140px; padding:25px; background-color: $purple5;}
+        .txt{
+            margin: 15px 0; 
+            font-size: 13px; line-height: 22px; text-align: center; 
+            @include tablet(){font-size: 12px; line-height: 20px;}
+
+            h2{
+                font-size: 15px; line-height: 26px; color: $purple; margin-bottom: 10px;
+                @include tablet(){font-size: 16px; line-height: 24px;}
+            }
+        }
+    }
+}
+// END 한국성폭력상담소
 
 // 연혁 -----------------------------------------
 .history-year{
@@ -846,7 +873,7 @@ footer{
 }
 // END 연혁
 
-// 조직구성 -------------------------------------
+// 조직구성 ---------------------------------------
 .organzation{
     margin:20px 0 0;width:100%;border-bottom:1px solid $gray20;
     caption{display: none;}
@@ -891,7 +918,7 @@ footer{
 }
 // END 조직구성
 
-// 오시는길 -----------------------------
+// 오시는길 ---------------------------------------
 .map-center{
     display: grid;
     grid-template-areas: "address" "map" "summary" "navi";
@@ -942,7 +969,7 @@ footer{
 }
 // END 오시는길
 
-// 정관·규정·약속 -------------------------
+// 정관·규정·약속 ----------------------------------
 .selectpromise{
     margin-bottom: 32px;
     @include mobile(){margin-bottom:40px;}
@@ -1019,7 +1046,7 @@ footer{
 }
 // END 정관·규정·약속
 
-// 비전선언문 ----------------------------
+// 비전선언문 --------------------------------------
 .declaration{
     .video {
         width: calc(100% + 48px) ; max-width: 900px; margin: 20px auto 30px -24px; 
@@ -1050,7 +1077,7 @@ footer{
 }
 // END 비전선언문
 
-// 상담·지지 공통 스타일 -----------------
+// 상담·지지 공통 스타일 ----------------------------
 .counsel{
     .cont-counsel{
         display: flex; justify-content: space-between; flex-direction: column; gap: 25px;
@@ -1072,6 +1099,7 @@ footer{
         .txt{
             width: 100%;
             font-size: 15px; line-height: 26px; letter-spacing: -1px;
+            word-break: keep-all; text-align:justify;
 
             @include tablet(){width: calc(100% - 26%); font-size: 16px; line-height: 29px; letter-spacing: -1px;}
             // 성폭력의 개념 상단 스타일 
@@ -1113,8 +1141,9 @@ footer{
         }
 
         .txt{
-            width: 100%;
-            font-size: 15px; line-height: 26px; letter-spacing: -1px; padding:20px;
+            width: 100%;padding:20px;
+            font-size: 15px; line-height: 26px; letter-spacing: -1px; 
+            word-break: keep-all; text-align:justify;
 
             @include tablet(){width: calc(100% - 40%); padding:20px 0; font-size: 16px; line-height: 29px; letter-spacing: -1px;}
         }
@@ -1164,11 +1193,11 @@ footer{
         }
     }
 
-    // 상담지원안내
+    // 상담지원안내, 공지>자원활동안내 공지>교육문의
     &.info{
         .txt{
             margin-bottom: 25px;
-            font-size: 15px; line-height: 26px; 
+            font-size: 15px; line-height: 26px; word-break: keep-all; text-align:justify;
             @include tablet(){font-size: 16px; line-height: 29px;}
         }
 
@@ -1187,6 +1216,30 @@ footer{
                     font-size: 15px; line-height: 26px; 
                     @include tablet(){font-size: 16px; line-height: 23px;}
                 }
+            }
+        }
+
+        // 공지>자원활동안내 --------------------
+        .ollist{
+            li{padding: 10px 0;}
+        }
+
+        .box{
+            margin-top: 15px; padding:18px 20px;
+            border:1px solid $gray20; 
+            font-size: 15px; line-height: 26px;
+            @include tablet(){margin-top: 20px; padding:15px 40px;font-size: 16px; line-height: 29px;}
+        }
+        // END 공지>자원활동안내
+
+        // 공지>교육문의 --------------------
+        .edureg{
+            display: flex; align-items: center; justify-content: center; 
+            width:200px; height: 44px; margin-top: 10px;
+            border: 1px solid $purple; border-radius: 22px 22px 22px 22px; 
+            font-size: 16px; color: $purple;
+            &.active img{
+                transform: rotate(90deg);
             }
         }
     }
@@ -1239,6 +1292,203 @@ footer{
 
     .mt25{margin: 25px 0 !important;}
     p{margin: 25px 0;}
-    .hor{width:100%; height: 1px; background-color: $gray20; margin: 25px 0;}
+    
 }
 // END 상담·지지 공통 스타일
+
+// 소개 페이지 -------------------------------------
+.intro-etc{
+    .layout{
+        display: flex; justify-content: space-between; flex-direction: column; gap: 33px;
+        padding:25px 0;
+        @include tablet(){flex-direction: row;}
+
+        .title{
+            width: 100%;
+            @include tablet(){width:29%;}
+
+            h2{
+                display: flex; justify-content: center; align-items: center;
+                width:100%; height: 154px; border:1px solid $gray20;
+                img{width:50%;}
+            }
+        }
+
+        .txt{
+            width: 100%;
+            font-size: 15px; line-height: 26px; letter-spacing: -1px; word-break: keep-all; text-align:justify;
+
+            @include tablet(){width: calc(100% - 26%); font-size: 16px; line-height: 29px; letter-spacing: -1px;}
+            
+            .txt_padding{margin: 0 0 25px;}
+            .txt_bold{font-weight: 400;}
+
+            .history{
+                background: url(../images/line_ver.png) repeat-y 69px 0;
+                // @include laptop(){background: url(../images/line_ver.png) repeat-y 50% 0;}
+        
+                & > ul{
+                    display: block;
+                    &>li{
+                        display: flex; gap:50px;
+                        height: auto;  
+                        font-size: 20px; color: $purple; line-height: 26px;
+                        
+                        padding-bottom:25px; text-align: left; 
+                        background: url(../images/point.svg) no-repeat 64px 6px;
+            
+                        & > ul{
+                            
+                            & > li{
+                                font-size: 15px; line-height: 26px; color: $gray80; 
+                                @include tablet(){font-size: 16px; line-height: 29px; }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    // 열림터 소식페이지 링크
+    .link-blog{
+        margin-bottom: 30px;
+        ul{
+            display: flex; justify-content: space-between; gap:10px;
+            
+            li{
+                width: 50%; height: 120px;
+                border: 1px solid $purple2;
+                a{
+                    display: flex; justify-content: center; 
+                    width: 100%; height: 100%; padding-top: 85px;
+                    color: $purple; font-size: 16px;
+                }
+                &:first-child{
+                    background: url(../images/openblog.svg) no-repeat 50% 20px;
+                }
+                &:last-child{
+                    background: url(../images/opensponsor.svg) no-repeat 50% 20px;
+                }
+            }
+        }
+    }
+
+
+}
+// END 소개 페이지
+
+// 후원안내 -----------------------------------------------------
+.sponsor{
+    .txt{
+        margin-bottom: 25px;
+        font-size: 15px; line-height: 26px; word-break: keep-all; text-align:justify;
+        @include tablet(){font-size: 16px; line-height: 29px;}
+    }
+
+    // 링크
+    .link{
+        margin-bottom: 40px;
+        ul{
+            display: flex; justify-content: space-between; gap:10px; flex-wrap: wrap;
+            
+            li{
+                width: 100%; height: 40px;
+                background-color: $purple;
+                @include tablet(){width: calc(50% - 5px);}
+                a{
+                    display: flex; justify-content: center; align-items: center;
+                    width: 100%; height: 100%;
+                    color: #fff; font-size: 16px;
+                }
+            }
+        }
+    }
+
+    h2{
+        color: $gray80; font-size: 20px; margin-bottom: 15px; margin-top: 50px;
+        @include tablet(){margin-bottom: 20px; margin-top: 40px;}
+    }
+
+    .benefit ul{
+        display: flex; flex-wrap: wrap; gap:10px; justify-content: flex-start;
+        @include tablet(){gap:15px; justify-content: center;}
+        li{
+            width:calc(100%/2 - 5px);
+            @include tablet(){width:calc(100%/3 - 10px);}
+
+            .img{
+                display: flex; justify-content: center; align-items: center; 
+                height: 140px; padding:25px; background-color: $purple5;}
+            .txt{
+                margin: 15px 0; 
+                font-size: 13px; line-height: 22px; text-align: center; 
+
+                @include tablet(){font-size: 14px; line-height: 24px;}
+            }
+        }
+    }
+
+    .sponsor_info ul{
+        
+        @include tablet(){display: flex; flex-wrap: wrap; gap:10px;}
+
+        li{
+            width:100%; padding:18px 20px; margin-bottom: 10px;
+            border:1px solid $gray20; 
+            font-size: 15px; line-height: 26px; 
+            @include tablet(){width: calc(100%/2 - 5px); margin-bottom: 0; font-size: 16px; line-height: 23px;}
+
+            h3{
+                color: $purple;
+                font-size: 15px; line-height: 26px; 
+                @include tablet(){font-size: 16px; line-height: 23px;}
+
+                button{
+                    width: 100%; text-align: left;
+                    background: url(/resource/images/folding-down.svg) no-repeat 100% 50%;
+                    @include tablet(){background: none;}
+
+                    &.active{
+                        background: url(/resource/images/folding-up.svg) no-repeat 100% 50%;
+                        @include tablet(){background: none;}
+                    }
+                }
+            }
+
+            .cont{ 
+                display: none;
+                margin-top: 10px;
+                @include tablet(){display: block;}
+            }
+
+            ol li{border:none; width:100%;padding:5px 0; text-indent: -18px; padding-left: 18px;}
+        }
+    }
+}
+// END 후원안내
+
+.reg-cont{
+    // display: none;
+    legend{display: none;}
+    dl{
+        @include tablet(){ display: flex; flex-wrap: wrap;}
+        dt{
+            display: flex; align-items: center;
+            width:100%; padding: 10px 0 0;
+            @include tablet(){ width: 120px; padding: 10px 0;}
+            label{
+                font-size: 15px; line-height: 26px; font-weight: 100;
+                @include tablet(){font-size: 16px; line-height: 29px;}
+            }
+        }
+        dd{
+            display: flex; align-items: center;
+            width:100%; padding: 0 0 10px ; color: $gray50;
+            @include tablet(){width: calc(100% - 120px); padding: 10px 0;}
+            &.inline{display: flex;gap:5px;}
+        }
+    }
+
+    .submit{display: flex; align-items: center; justify-content: center; width: 100%; height: 44px; background-color: $purple; color: #fff;font-size: 16px; }
+}

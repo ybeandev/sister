@@ -1,0 +1,19 @@
+<svg width="90" height="90" viewBox="0 0 90 90" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M24 85.5V55.5" stroke="#5F249F" stroke-width="2" stroke-miterlimit="10"/>
+<path d="M18 85.5V55.5" stroke="#5F249F" stroke-width="2" stroke-miterlimit="10"/>
+<path d="M12 85.5V55.5" stroke="#5F249F" stroke-width="2" stroke-miterlimit="10"/>
+<path d="M6 78V55.5" stroke="#5F249F" stroke-width="2" stroke-miterlimit="10"/>
+<path d="M6 85.5V81" stroke="#5F249F" stroke-width="2" stroke-miterlimit="10"/>
+<path d="M45 27C49.1421 27 52.5 23.6421 52.5 19.5C52.5 15.3579 49.1421 12 45 12C40.8579 12 37.5 15.3579 37.5 19.5C37.5 23.6421 40.8579 27 45 27Z" stroke="#5F249F" stroke-width="2" stroke-miterlimit="10"/>
+<path d="M72 21C76.1421 21 79.5 17.6421 79.5 13.5C79.5 9.35786 76.1421 6 72 6C67.8579 6 64.5 9.35786 64.5 13.5C64.5 17.6421 67.8579 21 72 21Z" stroke="#5F249F" stroke-width="2" stroke-miterlimit="10"/>
+<path d="M18 21C22.1421 21 25.5 17.6421 25.5 13.5C25.5 9.35786 22.1421 6 18 6C13.8579 6 10.5 9.35786 10.5 13.5C10.5 17.6421 13.8579 21 18 21Z" stroke="#5F249F" stroke-width="2" stroke-miterlimit="10"/>
+<path d="M30 57H84V84H30V57Z" stroke="#5F249F" stroke-width="2" stroke-miterlimit="10"/>
+<path d="M57 78C61.1421 78 64.5 74.6421 64.5 70.5C64.5 66.3579 61.1421 63 57 63C52.8579 63 49.5 66.3579 49.5 70.5C49.5 74.6421 52.8579 78 57 78Z" stroke="#5F249F" stroke-width="2" stroke-miterlimit="10"/>
+<path d="M39 69H36V72H39V69Z" fill="#5F249F"/>
+<path d="M45 69H42V72H45V69Z" fill="#5F249F"/>
+<path d="M72 69H69V72H72V69Z" fill="#5F249F"/>
+<path d="M78 69H75V72H78V69Z" fill="#5F249F"/>
+<path d="M82.5 52.5V31.5C82.5 29.0145 80.4855 27 78 27H76.497L72 31.5L67.503 27H66C63.5145 27 61.5 29.0145 61.5 31.5V52.5" stroke="#5F249F" stroke-width="2" stroke-miterlimit="10"/>
+<path d="M28.5 52.5V31.5C28.5 29.0145 26.4855 27 24 27H22.497L18 31.5L13.503 27H12C9.5145 27 7.5 29.0145 7.5 31.5V52.5" stroke="#5F249F" stroke-width="2" stroke-miterlimit="10"/>
+<path d="M55.5 52.5V37.5C55.5 35.0145 53.4855 33 51 33H49.497L45 37.5L40.503 33H39C36.5145 33 34.5 35.0145 34.5 37.5V52.5" stroke="#5F249F" stroke-width="2" stroke-miterlimit="10"/>
+</svg>

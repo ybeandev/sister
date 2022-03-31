@@ -199,4 +199,30 @@ $(function(){
         tabContCounsel.siblings().hide();
         tabContCounsel.eq(_idx).show();
     })
+
+    // 후원안내 tab
+    const buttonSponsor   = $('.sponsor_info button');
+
+    buttonSponsor.on('click', function(){
+        if($(this).hasClass('active')){
+            $(this).removeClass('active');
+            $(this).parent().next().hide()
+        }else{
+            $(this).addClass('active');
+            $(this).parent().next().show()
+        }
+    })
+
+    // 교육문의
+    const buttonEdu   = $('.edureg');
+
+    buttonEdu.on('click', function(){
+        if($(this).hasClass('active')){
+            $(this).removeClass('active');
+            $(this).parent().next().hide()
+        }else{
+            $(this).addClass('active');
+            $(this).parent().next().show()
+        }
+    })
 })
