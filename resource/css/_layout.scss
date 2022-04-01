@@ -1468,8 +1468,9 @@ footer{
 }
 // END 후원안내
 
+// 교육신청 ----------------------------------------------
 .reg-cont{
-    // display: none;
+    display: none;
     legend{display: none;}
     dl{
         @include tablet(){ display: flex; flex-wrap: wrap;}
@@ -1492,3 +1493,48 @@ footer{
 
     .submit{display: flex; align-items: center; justify-content: center; width: 100%; height: 44px; background-color: $purple; color: #fff;font-size: 16px; }
 }
+
+// 고유식별정보(주민번호)취급방침, 개인정보취급방침--------------------
+.term{
+    h2{font-size: 15px; line-height: 26px;}
+
+    .txt{margin: 15px 0;}
+
+    font-size: 15px; line-height: 26px; color: $gray80; font-weight: 100;
+    @include tablet(){font-size: 16px;}
+
+    h3{
+        margin-top: 20px; font-size: 15px; line-height: 26px; color: $gray80; font-weight: 500;
+        @include tablet(){font-size: 16px;}
+    }
+
+    ul{
+        & > li{
+            margin-left: 15px; text-indent: -15px; line-height: 26px;
+            @include tablet(){margin-left: 18px; text-indent: -18px; }
+        }
+    }
+
+
+    &.term1{
+        ul{
+            margin-top: 15px;
+            @include tablet(){margin:40px 0;}
+            & > li{
+                margin-left: 15px; text-indent: -15px; line-height: 26px;
+                @include tablet(){margin-left: 18px; text-indent: -18px; margin-top: 40px;}
+            }
+        }
+    }
+
+    &.term2{
+        ul.depth1{
+            & > li{
+                margin: 20px 0 20px 15px;
+                @include tablet(){margin: 20px 0 20px 18px; }
+            }
+        }
+    }
+
+}
+.mt40{margin-top: 40px;}
