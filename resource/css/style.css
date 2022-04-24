@@ -562,8 +562,10 @@ br.pc-only {
 @media (min-width: 768px) {
   .cont_board .list .number {
     position: relative;
+    width: 6%;
     top: 0;
     font-size: 15px;
+    text-align: center;
   }
 }
 
@@ -584,11 +586,17 @@ br.pc-only {
 
 @media (min-width: 768px) {
   .cont_board .list .title {
-    width: 70%;
+    width: 72%;
     padding-top: 0;
     padding-bottom: 0;
     font-size: 15px;
     font-weight: 500;
+  }
+}
+
+@media (min-width: 992px) {
+  .cont_board .list .title {
+    width: 83%;
   }
 }
 
@@ -1177,12 +1185,13 @@ br.pc-only {
   margin: 0 8px;
 }
 
+.cont_view .subheader .sns ul li img {
+  width: 30px;
+}
+
 @media (min-width: 768px) {
   .cont_view .subheader .sns ul li {
     margin: 0 4px;
-  }
-  .cont_view .subheader .sns ul li img {
-    width: 30px;
   }
 }
 
@@ -1369,12 +1378,24 @@ br.pc-only {
 }
 
 .reply_write .header > input:nth-child(1) {
-  width: 200px;
+  width: 33%;
   margin-right: 5px;
 }
 
+@media (min-width: 768px) {
+  .reply_write .header > input:nth-child(1) {
+    width: 200px;
+  }
+}
+
 .reply_write .header > input:nth-child(2) {
-  width: 200px;
+  width: 33%;
+}
+
+@media (min-width: 768px) {
+  .reply_write .header > input:nth-child(2) {
+    width: 200px;
+  }
 }
 
 .reply_write .header .form-check {
@@ -2071,6 +2092,7 @@ header {
 
 .gnb nav > ul > li > ul > li > ul {
   margin-top: 7px;
+  overflow: hidden;
 }
 
 @media (min-width: 768px) {
@@ -2085,13 +2107,14 @@ header {
   position: relative;
 }
 
+.gnb nav > ul > li > ul > li > ul > li a {
+  font-size: 12px;
+}
+
 @media (min-width: 768px) {
   .gnb nav > ul > li > ul > li > ul > li {
     height: 24px;
     padding-left: 18px;
-  }
-  .gnb nav > ul > li > ul > li > ul > li > a {
-    font-size: 13px;
   }
 }
 
@@ -2295,6 +2318,66 @@ main.main {
   main.main {
     margin-top: 80px;
   }
+}
+
+main.main > section .container {
+  position: relative;
+}
+
+main.main .link-main {
+  position: absolute;
+  bottom: 0;
+  right: 8px;
+}
+
+main.main .link-main ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+main.main .link-main ul li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  height: 47px;
+}
+
+main.main .link-main ul li:last-child {
+  background-color: #5F249F;
+  width: 285px;
+  height: 39px;
+  border-radius: 20px;
+  margin: 0 4px;
+  font-size: 16px;
+  color: #fff;
+  -webkit-box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+          box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+main.main .link-main ul li a {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+main.main .link-main ul li a:hover {
+  text-decoration: none;
+  color: #fff;
 }
 
 main.main .action h2 {
@@ -2779,6 +2862,11 @@ main.main .etc h2 {
   }
 }
 
+main.main .etc a:hover {
+  text-decoration: none;
+  color: #212529;
+}
+
 main.main .etc .sponsorship {
   width: 100%;
   margin-bottom: 20px;
@@ -2798,7 +2886,7 @@ main.main .etc .sponsorship {
 }
 
 main.main .etc .sponsorship .cont {
-  height: 86px;
+  height: 115px;
   padding: 20px;
   font-size: 20px;
   color: #fff;
@@ -2820,6 +2908,25 @@ main.main .etc .sponsorship .cont {
     height: 200px;
     background-size: 100px;
     background: #A177D8 url(/resource/images/main4.svg) no-repeat 87% 69%;
+  }
+}
+
+main.main .etc .sponsorship .cont .link {
+  margin-top: 7px;
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  main.main .etc .sponsorship .cont .link {
+    margin-top: 5px;
+    font-size: 16px;
+  }
+}
+
+@media (min-width: 992px) {
+  main.main .etc .sponsorship .cont .link {
+    margin-top: 60px;
+    font-size: 16px;
   }
 }
 
@@ -3831,6 +3938,10 @@ footer .social-copy .sns ul li:last-child > a {
     border-top: 1px solid #D8DAE6;
     border-bottom: none;
   }
+}
+
+.organzation table th.no-border, .organzation table td.no-border {
+  border-bottom: none;
 }
 
 .organzation table .depth1 {

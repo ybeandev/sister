@@ -182,13 +182,14 @@
             position: absolute; top:15px; left:0;
             color:$purple3; font-weight: 500;
 
-            @include tablet(){position: relative; top:0;font-size: 15px;}
+            @include tablet(){position: relative; width: 6%; top:0;font-size: 15px; text-align: center;}
         }
         .title{
             display: flex; align-items: center; flex-wrap: wrap;
             padding-top: 36px; padding-bottom: 10px;
             color:$gray80; font-size: 13px; 
-            @include tablet(){width: 70%; padding-top: 0; padding-bottom: 0;font-size: 15px; font-weight: 500;}
+            @include tablet(){width: 72%; padding-top: 0; padding-bottom: 0;font-size: 15px; font-weight: 500;}
+            @include laptop(){width: 83%;}
 
             .memo{
                 padding-top: 3px;
@@ -419,9 +420,10 @@
                 display: flex; justify-content: center;
                 li{
                     margin: 0 8px;
+                    img{width:30px;}
                     @include tablet(){
                         margin: 0 4px;
-                        img{width:30px;}
+                        // img{width:30px;}
                     }
                 }
             }
@@ -518,10 +520,12 @@
     .header{
         display: flex; align-items: center;
         & > input:nth-child(1){
-            width:200px; margin-right: 5px;
+            width:33%; margin-right: 5px;
+            @include tablet(){width:200px; }
         }
         & > input:nth-child(2){
-            width:200px;
+            width:33%;
+            @include tablet(){width:200px; }
         }
         .form-check{
             margin-left: 10px;
