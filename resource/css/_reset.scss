@@ -66,3 +66,7 @@ button {color:inherit;cursor:pointer;outline:none;letter-spacing:inherit; backgr
 button[disabled] {cursor:default;}
 em {font-style:normal;}
 hr {display:none;}
+
+input, textarea, button, a{
+	-webkit-appearance: none;
+}

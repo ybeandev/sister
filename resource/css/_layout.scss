@@ -719,18 +719,18 @@ main.sub{
 
 .side-menu{
     position: fixed; bottom:0; left:0; z-index: 110;
-    @include tablet(){display: none;}
-    @include laptop(){display: block; top:197px; left:50%; bottom:inherit; margin-left: 605px;}
+    // @include tablet(){display: none;}
+    @include desktop(){display: block; top:197px; left:50%; bottom:inherit; margin-left: 605px;}
 
     ul{
         display: -webkit-box; display: -ms-flexbox; display: flex; 
         -webkit-box-pack: justify; -ms-flex-pack: justify; justify-content: space-between; 
         -webkit-box-align: center; -ms-flex-align: center; align-items: center;
-        @include tablet(){flex-direction: column;}
+        @include desktop(){flex-direction: column;}
         
         li{
             width:calc(100vw / 4); height:54px; border: 1px solid #FFFFFF; border-right: none;
-            @include tablet(){
+            @include desktop(){
                 width: 72px; height: 60px; margin: 7px 0; 
                 border-radius: 6px 16px; box-shadow: 0 4px 4px rgba(0,0,0,.25); border:0;
             }
@@ -741,24 +741,24 @@ main.sub{
                 -webkit-box-align: center; -ms-flex-align: center; align-items: center;
                 width:100%; height: 100%; color: $purple; font-size: 14px; padding-top: 27px;
                 text-decoration: none;
-                @include tablet(){font-size: 13px;}
+                @include desktop(){font-size: 13px;}
             }
 
             &:nth-child(1){
                 background:$purple3 url(../images/handsheart.png) no-repeat center 6px;
-                @include tablet(){background:$purple3 url(../images/handsheart.png) no-repeat center 10px;}
+                @include desktop(){background:$purple3 url(../images/handsheart.png) no-repeat center 10px;}
             }
             &:nth-child(2){
                 background:$purple3 url(../images/Home_duotone_line.png) no-repeat center 6px;
-                @include tablet(){background:$purple3 url(../images/Home_duotone_line.png) no-repeat center 10px;}
+                @include desktop(){background:$purple3 url(../images/Home_duotone_line.png) no-repeat center 10px;}
             }
             &:nth-child(3){
                 background:$purple3 url(../images/notebook_light.png) no-repeat center 6px;
-                @include tablet(){background:$purple3 url(../images/notebook_light.png) no-repeat center 10px;}
+                @include desktop(){background:$purple3 url(../images/notebook_light.png) no-repeat center 10px;}
             }
             &:nth-child(4){
                 background:$purple3 url(../images/Book_open_light.png) no-repeat center 6px;border-right: 1px solid #FFFFFF; 
-                @include tablet(){background:$purple3 url(../images/Book_open_light.png) no-repeat center 10px;border-right:0}
+                @include desktop(){background:$purple3 url(../images/Book_open_light.png) no-repeat center 10px;border-right:0}
             }
         }
     }
@@ -769,7 +769,8 @@ footer{
     font-size: 10px; color: $gray50; line-height: 17px;
 
     @include mobile(){height:270px;}
-    @include tablet(){height:144px;padding-bottom:0; }
+    @include tablet(){height:180px;padding-bottom:0; }
+    @include desktop(){height:144px;padding-bottom:0; }
 
     .container{
         position: relative; padding-top: 22px;

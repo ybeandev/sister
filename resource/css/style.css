@@ -114,6 +114,10 @@ hr {
   display: none;
 }
 
+input, textarea, button, a {
+  -webkit-appearance: none;
+}
+
 body {
   font-family: "NanumBarunGothic";
   font-weight: 100;
@@ -3307,13 +3311,7 @@ main.sub .container .cont_body article .link-open ul li:last-child {
   z-index: 110;
 }
 
-@media (min-width: 768px) {
-  .side-menu {
-    display: none;
-  }
-}
-
-@media (min-width: 992px) {
+@media (min-width: 1380px) {
   .side-menu {
     display: block;
     top: 197px;
@@ -3335,7 +3333,7 @@ main.sub .container .cont_body article .link-open ul li:last-child {
   align-items: center;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1380px) {
   .side-menu ul {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -3351,7 +3349,7 @@ main.sub .container .cont_body article .link-open ul li:last-child {
   border-right: none;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1380px) {
   .side-menu ul li {
     width: 72px;
     height: 60px;
@@ -3381,7 +3379,7 @@ main.sub .container .cont_body article .link-open ul li:last-child {
   text-decoration: none;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1380px) {
   .side-menu ul li a {
     font-size: 13px;
   }
@@ -3391,7 +3389,7 @@ main.sub .container .cont_body article .link-open ul li:last-child {
   background: #D6C3F5 url(../images/handsheart.png) no-repeat center 6px;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1380px) {
   .side-menu ul li:nth-child(1) {
     background: #D6C3F5 url(../images/handsheart.png) no-repeat center 10px;
   }
@@ -3401,7 +3399,7 @@ main.sub .container .cont_body article .link-open ul li:last-child {
   background: #D6C3F5 url(../images/Home_duotone_line.png) no-repeat center 6px;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1380px) {
   .side-menu ul li:nth-child(2) {
     background: #D6C3F5 url(../images/Home_duotone_line.png) no-repeat center 10px;
   }
@@ -3411,7 +3409,7 @@ main.sub .container .cont_body article .link-open ul li:last-child {
   background: #D6C3F5 url(../images/notebook_light.png) no-repeat center 6px;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1380px) {
   .side-menu ul li:nth-child(3) {
     background: #D6C3F5 url(../images/notebook_light.png) no-repeat center 10px;
   }
@@ -3422,7 +3420,7 @@ main.sub .container .cont_body article .link-open ul li:last-child {
   border-right: 1px solid #FFFFFF;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 1380px) {
   .side-menu ul li:nth-child(4) {
     background: #D6C3F5 url(../images/Book_open_light.png) no-repeat center 10px;
     border-right: 0;
@@ -3445,6 +3443,13 @@ footer {
 }
 
 @media (min-width: 768px) {
+  footer {
+    height: 180px;
+    padding-bottom: 0;
+  }
+}
+
+@media (min-width: 1380px) {
   footer {
     height: 144px;
     padding-bottom: 0;

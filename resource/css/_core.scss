@@ -30,29 +30,37 @@ $purple5            : #F7F3FD;
 $mobile: 576px;
 $tablet: 768px;
 $laptop: 992px;
-// $desktop: 1100px;
+$desktop: 1380px;
 
 // Mixins
-//모바일 사이즈 (모바일 최소 사이즈 >=태블릿 세로사이즈)
+//모바일 사이즈
 @mixin mobile {
     @media (min-width: #{$mobile}) {
         @content;
     }
 }
 
-//태블릿 사이즈 - 노트북(laptop - pc최소사이즈) >= tablet 세로 버전까지
+//태블릿 사이즈
 @mixin tablet {
     @media (min-width: #{$tablet}) {
         @content;
     }
 }
 
-//노트북사이즈 - 노트북(laptop - pc최소사이즈)에서 tablet 세로 버전까지
+//노트북사이즈
 @mixin laptop {
     @media (min-width: #{$laptop}) {
         @content;
     }
 }
+
+//pc사이즈
+@mixin desktop {
+    @media (min-width: #{$desktop}) {
+        @content;
+    }
+}
+
 
 .pc-only{
     display: none;
